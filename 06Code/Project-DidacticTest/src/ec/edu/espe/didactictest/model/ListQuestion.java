@@ -192,4 +192,135 @@ public class ListQuestion {
             return false;
         }
     }
+    
+    public int indexOf(T elemento) {
+
+        if (isEmpty()) {
+            return -1;
+        } else {
+
+            Node<T> aux = primero;
+
+            int posicion = 0;
+            while (aux != null) {
+                if (elemento.equals(aux.getElemento())) { 
+                    return posicion; 
+                }
+                posicion++;
+                aux = aux.getSiguiente();
+            }
+            return -1;
+
+        }
+
+    }
+
+    public T removeFirst() {
+        
+        if (isEmpty()) {
+            return null;
+        } else {
+            
+            T elemento = primero.getElemento();
+            
+            Node<T> aux = primero.getSiguiente();
+            primero = null; 
+            primero = aux; 
+
+            if (size() == 1) {
+                ultimo = null;
+            }
+
+            tamanio--;
+
+            return elemento;
+
+        }
+
+    }
+
+ 
+    public T removeLast() {
+
+        if (isEmpty()) {
+            return null;
+        } else {
+
+            T elemento = ultimo.getElemento();
+
+            Node<T> aux = getNode(size() - 2);
+
+        
+            if (aux == null) {
+
+                ultimo = null;
+ 
+                if (size() == 2) {
+                    ultimo = primero;
+                } else {
+                    primero = null;
+                }
+
+            } else {
+                
+                ultimo = null;
+                ultimo = aux;
+                ultimo.setSiguiente(null);
+            }
+
+            tamanio--;
+
+            return elemento;
+
+        }
+
+    }
+
+  
+    public T remove(int index) {
+      
+        if (isEmpty() || (index < 0 || index >= size())) {
+            return null;
+        } else if (index == 0) {
+            return removeFirst();
+        } else if (index == size() - 1) {
+            return removeLast();
+        } else {
+
+            Node<T> nodo_anterior = getNode(index - 1);
+
+            Node<T> nodo_actual = getNode(index);
+
+            T elemento = nodo_actual.getElemento();
+
+            Node<T> nodo_siguiente = nodo_actual.getSiguiente();
+
+            nodo_actual = null;
+
+            nodo_anterior.setSiguiente(nodo_siguiente);
+
+            tamanio--;
+
+            return elemento;
+
+        }
+    }
+
+  
+    public T modify(T elemento, int index) {
+
+        if (isEmpty() || (index < 0 || index >= size())) {
+            return null;
+        } else {
+
+            Node<T> aux = getNode(index);
+
+            aux.setElemento(elemento);
+
+            return aux.getElemento();
+
+        }
+
+    }
+    
 }
