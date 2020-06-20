@@ -10,5 +10,28 @@ package ec.edu.espe.didactictest.model;
  * @author USER
  */
 public class Answer {
+    private String answer;
+    private boolean correctly;
+
+    public Answer(String answer) {
+        this.answer = answer;
+    }
+
+    public String getAnswer() {
+        return answer;
+    }   
+
+    public boolean isCorrectly() {
+        return correctly;
+    }
+
+    public void setCorrectly(boolean correctly) {
+        this.correctly = correctly;
+    }
+
+    @Override
+    public String toString() {
+        return answer;
+    }
     
 }
