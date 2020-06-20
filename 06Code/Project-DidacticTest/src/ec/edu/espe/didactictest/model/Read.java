@@ -1602,6 +1602,829 @@ public class Read {
                 correcto = false;
                 sc.next();
             }   
+            
+     if (!correcto) {
+                System.out.println("Error, introduce un numero real double");
+            } else {
+                parteDecimal = String.valueOf(real).split("\\.");
+
+                if (parteDecimal[1].length() > decimales) {
+                    correcto = false;
+                    System.out.println("Error, el numero de decimales debe ser " + decimales + " como maximo");
+                }
+            }
+
+        } while (!correcto);
+
+        return real;
+
+    }
+
+
+    public double pedirDoubleDecimales(int decimales, String mensaje) {
+
+        if (decimales < 1) {
+            decimales = 1;
+        }
+
+        double real = 0;
+        boolean correcto;
+        String[] parteDecimal;
+        do {
+            correcto = true;
+            try {
+                System.out.println(mensaje);
+                real = sc.nextDouble();
+            } catch (InputMismatchException ex) {
+                correcto = false;
+                sc.next();
+            }
+
+            if (!correcto) {
+                System.out.println("Error, introduce un numero real double");
+            } else {
+                parteDecimal = String.valueOf(real).split("\\.");
+
+                if (parteDecimal[1].length() > decimales) {
+                    correcto = false;
+                    System.out.println("Error, el numero de decimales debe ser " + decimales + " como maximo");
+                }
+            }
+
+        } while (!correcto);
+
+        return real;
+
+    }
+
+  
+    public double pedirDoubleDecimales(int decimales, String mensaje, String mensajeError) {
+
+        if (decimales < 1) {
+            decimales = 1;
+        }
+
+        double real = 0;
+        boolean correcto;
+        String[] parteDecimal;
+        do {
+            correcto = true;
+            try {
+                System.out.println(mensaje);
+                real = sc.nextDouble();
+            } catch (InputMismatchException ex) {
+                correcto = false;
+                sc.next();
+            }
+
+            if (!correcto) {
+                System.out.println(mensajeError);
+            } else {
+                parteDecimal = String.valueOf(real).split("\\.");
+
+                if (parteDecimal[1].length() > decimales) {
+                    correcto = false;
+                    System.out.println("Error, el numero de decimales debe ser " + decimales + " como maximo");
+                }
+            }
+
+        } while (!correcto);
+
+        return real;
+
+    }
+
+  
+    public double pedirDoublePositivoDecimales(int decimales) {
+
+        double real;
+        String[] parteDecimal;
+        do {
+            try {
+                System.out.println("Introduce un numero real positivo double con "+decimales+" decimales como maximo");
+                real = sc.nextDouble();
+            } catch (InputMismatchException ex) {
+                real = -1;
+                sc.next();
+            }
+
+            if (real < 0) {
+                System.out.println("Error, introducce un numero real positivo double");
+            } else {
+                parteDecimal = String.valueOf(real).split("\\.");
+
+                if (parteDecimal[1].length() > decimales) {
+                    real = -1;
+                    System.out.println("Error, el numero de decimales debe ser " + decimales);
+                }
+            }
+
+        } while (real < 0);
+
+        return real;
+    }
+
+ 
+    public double pedirDoublePositivoDecimales(int decimales, String mensaje) {
+
+        double real;
+        String[] parteDecimal;
+        do {
+            try {
+                System.out.println(mensaje);
+                real = sc.nextDouble();
+            } catch (InputMismatchException ex) {
+                real = -1;
+                sc.next();
+            }
+
+            if (real < 0) {
+                System.out.println("Error, introducce un numero real positivo double");
+            } else {
+                parteDecimal = String.valueOf(real).split("\\.");
+
+                if (parteDecimal[1].length() > decimales) {
+                    real = -1;
+                    System.out.println("Error, el numero de decimales debe ser " + decimales);
+                }
+            }
+
+        } while (real < 0);
+
+        return real;
+    }
+
+    public double pedirDoublePositivoDecimales(int decimales, String mensaje, String mensajeError) {
+
+        double real;
+        String[] parteDecimal;
+        do {
+            try {
+                System.out.println(mensaje);
+                real = sc.nextDouble();
+            } catch (InputMismatchException ex) {
+                real = -1;
+                sc.next();
+            }
+
+            if (real < 0) {
+                System.out.println(mensajeError);
+            } else {
+                parteDecimal = String.valueOf(real).split("\\.");
+
+                if (parteDecimal[1].length() > decimales) {
+                    real = -1;
+                    System.out.println("Error, el numero de decimales debe ser " + decimales);
+                }
+            }
+
+        } while (real < 0);
+
+        return real;
+    }
+
+ 
+    public float pedirFloat() {
+
+        float real = 0;
+        boolean correcto;
+        do {
+            correcto = true;
+            try {
+                System.out.println("Introduce un numero real float");
+                real = sc.nextFloat();
+            } catch (InputMismatchException ex) {
+               
+                correcto = false;
+                sc.next();
+            }
+
+            if (!correcto) {
+                System.out.println("Error, introduce un numero real float");
+            }
+
+        } while (!correcto);
+
+        return real;
+
+    }
+
+    public float pedirFloat(String mensaje) {
+
+        float real = 0;
+        boolean correcto;
+        do {
+            correcto = true;
+            try {
+                System.out.println(mensaje);
+                real = sc.nextFloat();
+            } catch (InputMismatchException ex) {
+                // En caso de error, se marca como incorrecto
+                correcto = false;
+                sc.next();
+            }
+
+            if (!correcto) {
+                System.out.println("Error, introduce un numero real float");
+            }
+
+        } while (!correcto);
+
+        return real;
+
+    }
+
+    public float pedirFloat(String mensaje, String mensajeError) {
+
+        float real = 0;
+        boolean correcto;
+        do {
+            correcto = true;
+            try {
+                System.out.println(mensaje);
+                real = sc.nextFloat();
+            } catch (InputMismatchException ex) {
+            
+                correcto = false;
+                sc.next();
+            }
+
+            if (!correcto) {
+                System.out.println(mensajeError);
+            }
+
+        } while (!correcto);
+
+        return real;
+
+    }
+
+    public float pedirFloatPositivo() {
+
+        float real;
+        do {
+            try {
+                System.out.println("Introduce un numero real positivo float");
+                real = sc.nextFloat();
+            } catch (InputMismatchException ex) {
+                real = -1;
+                sc.next();
+            }
+
+            if (real < 0) {
+                System.out.println("Error, introducce un numero real positivo float");
+            }
+
+        } while (real < 0);
+
+        return real;
+    }
+
+
+    public float pedirFloatPositivo(String mensaje) {
+
+        float real;
+        do {
+            try {
+                System.out.println(mensaje);
+                real = sc.nextFloat();
+            } catch (InputMismatchException ex) {
+                real = -1;
+                sc.next();
+            }
+
+            if (real < 0) {
+                System.out.println("Error, introducce un numero real positivo float");
+            }
+
+        } while (real < 0);
+
+        return real;
+    }
+
+ 
+    public float pedirFloatPositivo(String mensaje, String mensajeError) {
+
+        float real;
+        do {
+            try {
+                System.out.println(mensaje);
+                real = sc.nextFloat();
+            } catch (InputMismatchException ex) {
+                real = -1;
+                sc.next();
+            }
+
+            if (real < 0) {
+                System.out.println(mensajeError);
+            }
+
+        } while (real < 0);
+
+        return real;
+    }
+
+    public float pedirFloatNegativo() {
+        float real;
+        do {
+            try {
+                System.out.println("Introduce un numero real negativo float");
+                real = sc.nextFloat();
+            } catch (InputMismatchException ex) {
+                real = 1;
+                sc.next();
+            }
+
+            if (real >= 0) {
+                System.out.println("Error, introducce un numero real negativo float");
+            }
+
+        } while (real >= 0);
+
+        return real;
+    }
+
+  
+    public float pedirFloatNegativo(String mensaje) {
+        float real;
+        do {
+            try {
+                System.out.println(mensaje);
+                real = sc.nextFloat();
+            } catch (InputMismatchException ex) {
+                real = 1;
+                sc.next();
+            }
+
+            if (real >= 0) {
+                System.out.println("Error, introducce un numero real negativo float");
+            }
+
+        } while (real >= 0);
+
+        return real;
+    }
+
+    public float pedirFloatNegativo(String mensaje, String mensajeError) {
+        float real;
+        do {
+            try {
+                System.out.println(mensaje);
+                real = sc.nextFloat();
+            } catch (InputMismatchException ex) {
+                real = 1;
+                sc.next();
+            }
+
+            if (real >= 0) {
+                System.out.println(mensajeError);
+            }
+
+        } while (real >= 0);
+
+        return real;
+    }
+
+  
+    public float pedirFloatRango(float minimo, float maximo) {
+
+        float real;
+
+        if (minimo > maximo) {
+            float aux = minimo;
+            minimo = maximo;
+            maximo = aux;
+        }
+
+        do {
+            try {
+                System.out.println("Introduce un numero float entre " + minimo + " y " + maximo);
+                real = sc.nextFloat();
+            } catch (InputMismatchException ex) {
+                real = maximo + 1;
+                sc.next();
+            }
+
+            if (!(real >= minimo && real <= maximo)) {
+                System.out.println("Error, Introduce un numero float entre " + minimo + " y " + maximo + " como maximo");
+            }
+
+        } while (!(real >= minimo && real <= maximo));
+
+        return real;
+    }       
+            
+  public float pedirFloatRango(float minimo, float maximo, String mensaje) {
+
+        float real;
+
+        if (minimo > maximo) {
+            float aux = minimo;
+            minimo = maximo;
+            maximo = aux;
+        }
+
+        do {
+            try {
+                System.out.println(mensaje);
+                real = sc.nextFloat();
+            } catch (InputMismatchException ex) {
+                real = maximo + 1;
+                sc.next();
+            }
+
+            if (!(real >= minimo && real <= maximo)) {
+                System.out.println("Error, Introduce un numero float entre " + minimo + " y " + maximo + " como maximo");
+            }
+
+        } while (!(real >= minimo && real <= maximo));
+
+        return real;
+    }
+
+   
+    public float pedirFloatRango(float minimo, float maximo, String mensaje, String mensajeError) {
+
+        float real;
+
+        if (minimo > maximo) {
+            float aux = minimo;
+            minimo = maximo;
+            maximo = aux;
+        }
+
+        do {
+            try {
+                System.out.println(mensaje);
+                real = sc.nextFloat();
+            } catch (InputMismatchException ex) {
+                real = maximo + 1;
+                sc.next();
+            }
+
+            if (!(real >= minimo && real <= maximo)) {
+                System.out.println(mensajeError);
+            }
+
+        } while (!(real >= minimo && real <= maximo));
+
+        return real;
+    }
+    
+
+    public float pedirFloatDecimales(int decimales) {
+
+        if (decimales < 1) {
+            decimales = 1;
+        }
+
+        float real = 0;
+        boolean correcto;
+        String[] parteDecimal;
+        do {
+            correcto = true;
+            try {
+                System.out.println("Introduce un numero real float con "+decimales+" decimales como maximo");
+                real = sc.nextFloat();
+            } catch (InputMismatchException ex) {
+                correcto = false;
+                sc.next();
+            }
+
+            if (!correcto) {
+                System.out.println("Error, introduce un numero real float");
+            } else {
+                parteDecimal = String.valueOf(real).split("\\.");
+
+                if (parteDecimal[1].length() > decimales) {
+                    correcto = false;
+                    System.out.println("Error, el numero de decimales debe ser " + decimales + " como maximo");
+                }
+            }
+
+        } while (!correcto);
+
+        return real;
+
+    }
+
+    public float pedirFloatDecimales(int decimales, String mensaje) {
+
+        if (decimales < 1) {
+            decimales = 1;
+        }
+
+        float real = 0;
+        boolean correcto;
+        String[] parteDecimal;
+        do {
+            correcto = true;
+            try {
+                System.out.println(mensaje);
+                real = sc.nextFloat();
+            } catch (InputMismatchException ex) {
+                correcto = false;
+                sc.next();
+            }
+
+            if (!correcto) {
+                System.out.println("Error, introduce un numero real float con "+decimales+" decimales como maximo");
+            } else {
+                parteDecimal = String.valueOf(real).split("\\.");
+
+                if (parteDecimal[1].length() > decimales) {
+                    correcto = false;
+                    System.out.println("Error, el numero de decimales debe ser " + decimales + " como maximo");
+                }
+            }
+
+        } while (!correcto);
+
+        return real;
+
+    }
+
+   
+    public float pedirFloatDecimales(int decimales, String mensaje, String mensajeError) {
+
+        if (decimales < 1) {
+            decimales = 1;
+        }
+
+        float real = 0;
+        boolean correcto;
+        String[] parteDecimal;
+        do {
+            correcto = true;
+            try {
+                System.out.println(mensaje);
+                real = sc.nextFloat();
+            } catch (InputMismatchException ex) {
+                correcto = false;
+                sc.next();
+            }
+
+            if (!correcto) {
+                System.out.println(mensajeError);
+            } else {
+                parteDecimal = String.valueOf(real).split("\\.");
+
+                if (parteDecimal[1].length() > decimales) {
+                    correcto = false;
+                    System.out.println("Error, el numero de decimales debe ser " + decimales + " como maximo");
+                }
+            }
+
+        } while (!correcto);
+
+        return real;
+
+    }
+
+    public float pedirFloatPositivoDecimales(int decimales) {
+
+        float real;
+        String[] parteDecimal;
+        do {
+            try {
+                System.out.println("Introduce un numero real positivo float con "+decimales+" decimales como maximo");
+                real = sc.nextFloat();
+            } catch (InputMismatchException ex) {
+                real = -1;
+                sc.next();
+            }
+
+            if (real < 0) {
+                System.out.println("Error, introducce un numero real positivo float");
+            } else {
+                parteDecimal = String.valueOf(real).split("\\.");
+
+                if (parteDecimal[1].length() > decimales) {
+                    real = -1;
+                    System.out.println("Error, el numero de decimales debe ser " + decimales);
+                }
+            }
+
+        } while (real < 0);
+
+        return real;
+    }
+
+    public float pedirFloatPositivoDecimales(int decimales, String mensaje) {
+
+        float real;
+        String[] parteDecimal;
+        do {
+            try {
+                System.out.println(mensaje);
+                real = sc.nextFloat();
+            } catch (InputMismatchException ex) {
+                real = -1;
+                sc.next();
+            }
+
+            if (real < 0) {
+                System.out.println("Error, introducce un numero real positivo float");
+            } else {
+                parteDecimal = String.valueOf(real).split("\\.");
+
+                if (parteDecimal[1].length() > decimales) {
+                    real = -1;
+                    System.out.println("Error, el numero de decimales debe ser " + decimales);
+                }
+            }
+
+        } while (real < 0);
+
+        return real;
+    }
+
+   
+    public float pedirFloatPositivoDecimales(int decimales, String mensaje, String mensajeError) {
+
+        float real;
+        String[] parteDecimal;
+        do {
+            try {
+                System.out.println(mensaje);
+                real = sc.nextFloat();
+            } catch (InputMismatchException ex) {
+                real = -1;
+                sc.next();
+            }
+
+            if (real < 0) {
+                System.out.println(mensajeError);
+            } else {
+                parteDecimal = String.valueOf(real).split("\\.");
+
+                if (parteDecimal[1].length() > decimales) {
+                    real = -1;
+                    System.out.println("Error, el numero de decimales debe ser " + decimales);
+                }
+            }
+
+        } while (real < 0);
+
+        return real;
+    }
+
+
+    public char pedirChar() {
+
+        System.out.println("Introduce un caracter (en caso de tener mas de un caracter, se cogera el primer caracter)");
+        char caracter = sc.next().charAt(0);
+
+        return caracter;
+
+    }
+
+    public char pedirChar(String mensaje) {
+
+        System.out.println(mensaje);
+        char caracter = sc.next().charAt(0);
+
+        return caracter;
+
+    }
+
+    public boolean pedirBoolean() {
+
+        boolean booleano = false, correcto;
+        do {
+            correcto = true;
+            try {
+                System.out.println("Introduce un booleano (true o false)");
+                booleano = sc.nextBoolean();
+            } catch (Exception ex) {
+                correcto = false;
+                sc.next();
+            }
+            if (!correcto) {
+                System.out.println("Error, introduce un valor booleano");
+            }
+
+        } while (!correcto);
+
+        return booleano;
+    }
+
+ 
+    public boolean pedirBoolean(String mensaje) {
+
+        boolean booleano = false, correcto;
+        do {
+            correcto = true;
+            try {
+                System.out.println(mensaje);
+                booleano = sc.nextBoolean();
+            } catch (Exception ex) {
+                correcto = false;
+                sc.next();
+            }
+            if (!correcto) {
+                System.out.println("Error, introduce un valor booleano");
+            }
+
+        } while (!correcto);
+
+        return booleano;
+    }
+
+    public boolean pedirBoolean(String mensaje, String mensajeError) {
+
+        boolean booleano = false, correcto;
+        do {
+            correcto = true;
+            try {
+                System.out.println(mensaje);
+                booleano = sc.nextBoolean();
+            } catch (Exception ex) {
+                correcto = false;
+                sc.next();
+            }
+            if (!correcto) {
+                System.out.println(mensajeError);
+            }
+
+        } while (!correcto);
+
+        return booleano;
+    }
+
+   
+    public boolean pedirBooleanSiNo() {
+
+        boolean correcto, booleano = false;
+        String respuesta = "";
+        do {
+            correcto = true;
+            try {
+                System.out.println("Introduce Si o No");
+                respuesta = sc.next();
+                respuesta = respuesta.toLowerCase().trim();
+            } catch (Exception ex) {
+                correcto = false;
+                sc.next();
+            }
+
+            if (respuesta.equals("si")) {
+                booleano = true;
+            } else if (respuesta.equals("no")) {
+                booleano = false;
+            } else {
+                correcto = false;
+            }
+
+            if (!(respuesta.equals("si")) || respuesta.equals("no")) {
+                correcto = false;
+            }
+
+            if (!correcto) {
+                System.out.println("Error, introduce un valor booleano");
+            }
+
+        } while (!correcto);
+
+        return booleano;
+    }
+
+    
+    public boolean pedirBooleanSiNo(String mensaje) {
+
+        boolean correcto, booleano = false;
+        String respuesta = "";
+        do {
+            correcto = true;
+            try {
+                System.out.println(mensaje);
+                respuesta = sc.next();
+                respuesta = respuesta.toLowerCase().trim();
+            } catch (Exception ex) {
+                correcto = false;
+                sc.next();
+            }
+
+            if (respuesta.equals("si")) {
+                booleano = true;
+            } else if (respuesta.equals("no")) {
+                booleano = false;
+            } else {
+                correcto = false;
+            }
+
+            if (!(respuesta.equals("si")) || respuesta.equals("no")) {
+                correcto = false;
+            }
+
+            if (!correcto) {
+                System.out.println("Error, introduce un valor booleano");
+            }
+
+        } while (!correcto);
+
+        return booleano;
+    }          
     
     
 }
