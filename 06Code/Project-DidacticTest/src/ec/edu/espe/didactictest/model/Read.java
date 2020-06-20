@@ -792,4 +792,420 @@ public class Read {
     
     
     
+    
+     public long pedirLongPositivo(String mensaje) {
+
+        long num;
+        do {
+            try {
+                System.out.println(mensaje);
+                num = sc.nextLong();
+            } catch (InputMismatchException ex) {
+         
+                num = -1;
+                sc.next();
+            }
+
+            if (num < 0) {
+                System.out.println("Error, introducce un numero entero positivo long");
+            }
+
+        } while (num < 0);
+
+        return num;
+    }
+
+    
+    public long pedirLongPositivo(String mensaje, String mensajeError) {
+
+        long num;
+        do {
+            try {
+                System.out.println(mensaje);
+                num = sc.nextLong();
+            } catch (InputMismatchException ex) {
+                
+                num = -1;
+                sc.next();
+            }
+
+            if (num < 0) {
+                System.out.println(mensajeError);
+            }
+
+        } while (num < 0);
+
+        return num;
+    }
+
+    
+    public long pedirLongNegativo() {
+        long num;
+        do {
+            try {
+                System.out.println("Introduce un numero entero negativo long");
+                num = sc.nextLong();
+            } catch (InputMismatchException ex) {
+               
+                num = 1;
+                sc.next();
+            }
+
+            if (num >= 0) {
+                System.out.println("Error, introducce un numero entero negativo long");
+            }
+
+        } while (num >= 0);
+
+        return num;
+    }
+
+   
+    public long pedirLongNegativo(String mensaje) {
+        long num;
+        do {
+            try {
+                System.out.println(mensaje);
+                num = sc.nextLong();
+            } catch (InputMismatchException ex) {
+               
+                num = 1;
+                sc.next();
+            }
+
+            if (num >= 0) {
+                System.out.println("Error, introducce un numero entero negativo long");
+            }
+
+        } while (num >= 0);
+
+        return num;
+    }
+
+ 
+    public long pedirLongNegativo(String mensaje, String mensajeError) {
+        long num;
+        do {
+            try {
+                System.out.println(mensaje);
+                num = sc.nextLong();
+            } catch (InputMismatchException ex) {
+              
+                num = 1;
+                sc.next();
+            }
+
+            if (num >= 0) {
+                System.out.println(mensajeError);
+            }
+
+        } while (num >= 0);
+
+        return num;
+    }
+
+    
+    public long pedirLongRango(long minimo, long maximo) {
+        long num;
+
+  
+        if (minimo > maximo) {
+            long aux = minimo;
+            minimo = maximo;
+            maximo = aux;
+        }
+
+        do {
+            try {
+                System.out.println("Introduce un numero long entre " + minimo + " y " + maximo);
+                num = sc.nextLong();
+            } catch (InputMismatchException ex) {
+                
+                num = (byte) (maximo + 1);
+                sc.next();
+            }
+
+            if (!(num >= minimo && num <= maximo)) {
+                System.out.println("Error, Introduce un numero long entre " + minimo + " y " + maximo);
+            }
+
+        } while (!(num >= minimo && num <= maximo));
+
+        return num;
+    }
+
+   
+    public long pedirLongRango(long minimo, long maximo, String mensaje) {
+        long num;
+
+        
+        if (minimo > maximo) {
+            long aux = minimo;
+            minimo = maximo;
+            maximo = aux;
+        }
+
+        do {
+            try {
+                System.out.println(mensaje);
+                num = sc.nextLong();
+            } catch (InputMismatchException ex) {
+               
+                num = (byte) (maximo + 1);
+                sc.next();
+            }
+
+            if (!(num >= minimo && num <= maximo)) {
+                System.out.println("Error, Introduce un numero long entre " + minimo + " y " + maximo);
+            }
+
+        } while (!(num >= minimo && num <= maximo));
+
+        return num;
+    }
+
+   
+    public long pedirLongRango(long minimo, long maximo, String mensaje, String mensajeError) {
+        long num;
+
+     
+        if (minimo > maximo) {
+            long aux = minimo;
+            minimo = maximo;
+            maximo = aux;
+        }
+
+        do {
+            try {
+                System.out.println(mensaje);
+                num = sc.nextLong();
+            } catch (InputMismatchException ex) {
+                
+                num = (byte) (maximo + 1);
+                sc.next();
+            }
+
+            if (!(num >= minimo && num <= maximo)) {
+                System.out.println(mensajeError);
+            }
+
+        } while (!(num >= minimo && num <= maximo));
+
+        return num;
+    }
+
+   
+    public short pedirShort() {
+
+        short num = 0;
+        boolean correcto;
+        do {
+            correcto = true;
+            try {
+                System.out.println("Introduce un numero entero short");
+                num = sc.nextShort();
+            } catch (InputMismatchException ex) {
+                
+                correcto = false;
+                sc.next();
+            }
+
+            
+            if (!correcto) {
+                System.out.println("Error, introducce un numero entero short");
+            }
+
+        } while (!correcto);
+
+        return num;
+    }
+
+  
+    public short pedirShort(String mensaje) {
+
+        short num = 0;
+        boolean correcto;
+        do {
+            correcto = true;
+            try {
+                System.out.println(mensaje);
+                num = sc.nextShort();
+            } catch (InputMismatchException ex) {
+                
+                correcto = false;
+                sc.next();
+            }
+
+           
+            if (!correcto) {
+                System.out.println("Error, introducce un numero entero short");
+            }
+
+        } while (!correcto);
+
+        return num;
+    }
+
+    
+    public short pedirShort(String mensaje, String mensajeError) {
+
+        short num = 0;
+        boolean correcto;
+        do {
+            correcto = true;
+            try {
+                System.out.println(mensaje);
+                num = sc.nextShort();
+            } catch (InputMismatchException ex) {
+                
+                correcto = false;
+                sc.next();
+            }
+
+            
+            if (!correcto) {
+                System.out.println(mensajeError);
+            }
+
+        } while (!correcto);
+
+        return num;
+    }
+
+   
+    public short pedirShortPositivo() {
+
+        short num;
+        do {
+            try {
+                System.out.println("Introduce un numero entero positivo short");
+                num = sc.nextShort();
+            } catch (InputMismatchException ex) {
+                
+                num = -1;
+                sc.next();
+            }
+
+            if (num < 0) {
+                System.out.println("Error, introducce un numero entero positivo short");
+            }
+
+        } while (num < 0);
+
+        return num;
+    }
+
+    
+    public short pedirShortPositivo(String mensaje) {
+
+        short num;
+        do {
+            try {
+                System.out.println(mensaje);
+                num = sc.nextShort();
+            } catch (InputMismatchException ex) {
+                
+                num = -1;
+                sc.next();
+            }
+
+            if (num < 0) {
+                System.out.println("Error, introducce un numero entero positivo short");
+            }
+
+        } while (num < 0);
+
+        return num;
+    }
+
+ 
+    public short pedirShortPositivo(String mensaje, String mensajeError) {
+
+        short num;
+        do {
+            try {
+                System.out.println(mensaje);
+                num = sc.nextShort();
+            } catch (InputMismatchException ex) {
+          
+                num = -1;
+                sc.next();
+            }
+
+            if (num < 0) {
+                System.out.println(mensajeError);
+            }
+
+        } while (num < 0);
+
+        return num;
+    }
+
+  
+    public short pedirShortNegativo() {
+        short num;
+        do {
+            try {
+                System.out.println("Introduce un numero entero negativo short");
+                num = sc.nextShort();
+            } catch (InputMismatchException ex) {
+   
+                num = 1;
+                sc.next();
+            }
+
+            if (num >= 0) {
+                System.out.println("Error, introducce un numero entero negativo short");
+            }
+
+        } while (num >= 0);
+
+        return num;
+    }
+
+    public short pedirShortNegativo(String mensaje) {
+        short num;
+        do {
+            try {
+                System.out.println(mensaje);
+                num = sc.nextShort();
+            } catch (InputMismatchException ex) {
+            
+                num = 1;
+                sc.next();
+            }
+
+            if (num >= 0) {
+                System.out.println("Error, introducce un numero entero negativo short");
+            }
+
+        } while (num >= 0);
+
+        return num;
+    }
+
+ 
+    public short pedirShortNegativo(String mensaje, String mensajeError) {
+        short num;
+        do {
+            try {
+                System.out.println(mensaje);
+                num = sc.nextShort();
+            } catch (InputMismatchException ex) {
+  
+                num = 1;
+                sc.next();
+            }
+
+            if (num >= 0) {
+                System.out.println(mensajeError);
+            }
+
+        } while (num >= 0);
+
+        return num;
+    }
+    
+    
+    
 }
