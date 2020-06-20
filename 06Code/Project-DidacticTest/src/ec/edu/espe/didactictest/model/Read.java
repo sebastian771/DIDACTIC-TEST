@@ -1205,7 +1205,403 @@ public class Read {
 
         return num;
     }
-    
+
+    public short pedirShortRango(long minimo, long maximo) {
+        short num;
+
+        if (minimo > maximo) {
+            long aux = minimo;
+            minimo = maximo;
+            maximo = aux;
+        }
+
+        do {
+            try {
+                System.out.println("Introduce un numero short entre " + minimo + " y " + maximo);
+                num = sc.nextShort();
+            } catch (InputMismatchException ex) {
+           
+                num = (byte) (maximo + 1);
+                sc.next();
+            }
+
+            if (!(num >= minimo && num <= maximo)) {
+                System.out.println("Error, Introduce un numero short entre " + minimo + " y " + maximo);
+            }
+
+        } while (!(num >= minimo && num <= maximo));
+
+        return num;
+    }
+
+  
+    public short pedirShortRango(short minimo, short maximo, String mensaje) {
+        short num;
+
+        if (minimo > maximo) {
+            short aux = minimo;
+            minimo = maximo;
+            maximo = aux;
+        }
+
+        do {
+            try {
+                System.out.println(mensaje);
+                num = sc.nextShort();
+            } catch (InputMismatchException ex) {
+                
+                num = (byte) (maximo + 1);
+                sc.next();
+            }
+
+            if (!(num >= minimo && num <= maximo)) {
+                System.out.println("Error, Introduce un numero short entre " + minimo + " y " + maximo);
+            }
+
+        } while (!(num >= minimo && num <= maximo));
+
+        return num;
+    }
+
+  
+    public short pedirShortRango(short minimo, short maximo, String mensaje, String mensajeError) {
+        short num;
+
+      
+        if (minimo > maximo) {
+            short aux = minimo;
+            minimo = maximo;
+            maximo = aux;
+        }
+
+        do {
+            try {
+                System.out.println(mensaje);
+                num = sc.nextShort();
+            } catch (InputMismatchException ex) {
+              
+                num = (byte) (maximo + 1);
+                sc.next();
+            }
+
+            if (!(num >= minimo && num <= maximo)) {
+                System.out.println(mensajeError);
+            }
+
+        } while (!(num >= minimo && num <= maximo));
+
+        return num;
+    }
+
+   
+    public double pedirDouble() {
+
+        double real = 0;
+        boolean correcto;
+        do {
+            correcto = true;
+            try {
+                System.out.println("Introduce un numero real double");
+                real = sc.nextDouble();
+            } catch (InputMismatchException ex) {
+              
+                correcto = false;
+                sc.next();
+            }
+
+            if (!correcto) {
+                System.out.println("Error, introduce un numero real double");
+            }
+
+        } while (!correcto);
+
+        return real;
+
+    }
+
+   
+    public double pedirDouble(String mensaje) {
+
+        double real = 0;
+        boolean correcto;
+        do {
+            correcto = true;
+            try {
+                System.out.println(mensaje);
+                real = sc.nextDouble();
+            } catch (InputMismatchException ex) {
+                
+                correcto = false;
+                sc.next();
+            }
+
+            if (!correcto) {
+                System.out.println("Error, introduce un numero real");
+            }
+
+        } while (!correcto);
+
+        return real;
+
+    }
+
+    public double pedirDouble(String mensaje, String mensajeError) {
+
+        double real = 0;
+        boolean correcto;
+        do {
+            correcto = true;
+            try {
+                System.out.println(mensaje);
+                real = sc.nextDouble();
+            } catch (InputMismatchException ex) {
+               
+                correcto = false;
+                sc.next();
+            }
+
+            if (!correcto) {
+                System.out.println(mensajeError);
+            }
+
+        } while (!correcto);
+
+        return real;
+
+    }
+
+ 
+    public double pedirDoublePositivo() {
+
+        double real;
+        do {
+            try {
+                System.out.println("Introduce un numero real positivo double");
+                real = sc.nextDouble();
+            } catch (InputMismatchException ex) {
+                real = -1;
+                sc.next();
+            }
+
+            if (real < 0) {
+                System.out.println("Error, introducce un numero real positivo double");
+            }
+
+        } while (real < 0);
+
+        return real;
+    }
+
+    public double pedirDoublePositivo(String mensaje) {
+
+        double real;
+        do {
+            try {
+                System.out.println(mensaje);
+                real = sc.nextDouble();
+            } catch (InputMismatchException ex) {
+                real = -1;
+                sc.next();
+            }
+
+            if (real < 0) {
+                System.out.println("Error, introducce un numero real positivo double");
+            }
+
+        } while (real < 0);
+
+        return real;
+    }
+
+    public double pedirDoublePositivo(String mensaje, String mensajeError) {
+
+        double real;
+        do {
+            try {
+                System.out.println(mensaje);
+                real = sc.nextDouble();
+            } catch (InputMismatchException ex) {
+                real = -1;
+                sc.next();
+            }
+
+            if (real < 0) {
+                System.out.println(mensajeError);
+            }
+
+        } while (real < 0);
+
+        return real;
+    }
+
+ 
+    public double pedirDoubleNegativo() {
+        double real;
+        do {
+            try {
+                System.out.println("Introduce un numero real negativo double");
+                real = sc.nextDouble();
+            } catch (InputMismatchException ex) {
+                real = 1;
+                sc.next();
+            }
+
+            if (real >= 0) {
+                System.out.println("Error, introducce un numero real negativo double");
+            }
+
+        } while (real >= 0);
+
+        return real;
+    }
+
+    public double pedirDoubleNegativo(String mensaje) {
+        double real;
+        do {
+            try {
+                System.out.println(mensaje);
+                real = sc.nextDouble();
+            } catch (InputMismatchException ex) {
+                real = 1;
+                sc.next();
+            }
+
+            if (real >= 0) {
+                System.out.println("Error, introducce un numero real negativo double");
+            }
+
+        } while (real >= 0);
+
+        return real;
+    }
+
+    public double pedirDoubleNegativo(String mensaje, String mensajeError) {
+        double real;
+        do {
+            try {
+                System.out.println(mensaje);
+                real = sc.nextDouble();
+            } catch (InputMismatchException ex) {
+                real = 1;
+                sc.next();
+            }
+
+            if (real >= 0) {
+                System.out.println(mensajeError);
+            }
+
+        } while (real >= 0);
+
+        return real;
+    }
+
+  
+    public double pedirDoubleRango(double minimo, double maximo) {
+
+        double real;
+
+        if (minimo > maximo) {
+            double aux = minimo;
+            minimo = maximo;
+            maximo = aux;
+        }
+
+        do {
+            try {
+                System.out.println("Introduce un numero double entre " + minimo + " y " + maximo);
+                real = sc.nextDouble();
+            } catch (InputMismatchException ex) {
+                real = maximo + 1;
+                sc.next();
+            }
+
+            if (!(real >= minimo && real <= maximo)) {
+                System.out.println("Error, Introduce un numero double entre " + minimo + " y " + maximo + " como maximo");
+            }
+
+        } while (!(real >= minimo && real <= maximo));
+
+        return real;
+    }
+
+
+    public double pedirDoubleRango(double minimo, double maximo, String mensaje) {
+
+        double real;
+
+        if (minimo > maximo) {
+            double aux = minimo;
+            minimo = maximo;
+            maximo = aux;
+        }
+
+        do {
+            try {
+                System.out.println(mensaje);
+                real = sc.nextDouble();
+            } catch (InputMismatchException ex) {
+                real = maximo + 1;
+                sc.next();
+            }
+
+            if (!(real >= minimo && real <= maximo)) {
+                System.out.println("Error, Introduce un numero double entre " + minimo + " y " + maximo + " como maximo");
+            }
+
+        } while (!(real >= minimo && real <= maximo));
+
+        return real;
+    }
+
+   
+    public double pedirDoubleRango(double minimo, double maximo, String mensaje, String mensajeError) {
+
+        double real;
+
+       
+        if (minimo > maximo) {
+            double aux = minimo;
+            minimo = maximo;
+            maximo = aux;
+        }
+
+        do {
+            try {
+                System.out.println(mensaje);
+                real = sc.nextDouble();
+            } catch (InputMismatchException ex) {
+                real = maximo + 1;
+                sc.next();
+            }
+
+            if (!(real >= minimo && real <= maximo)) {
+                System.out.println(mensajeError);
+            }
+
+        } while (!(real >= minimo && real <= maximo));
+
+        return real;
+    }
+
+   
+    public double pedirDoubleDecimales(int decimales) {
+
+        if (decimales < 1) {
+            decimales = 1;
+        }
+
+        double real = 0;
+        boolean correcto;
+        String[] parteDecimal;
+        do {
+            correcto = true;
+            try {
+                System.out.println("Introduce un numero real double con "+decimales+" decimales como maximo");
+                real = sc.nextDouble();
+            } catch (InputMismatchException ex) {
+                correcto = false;
+                sc.next();
+            }   
     
     
 }
