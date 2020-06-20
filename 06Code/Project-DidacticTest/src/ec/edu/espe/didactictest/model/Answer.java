@@ -7,7 +7,7 @@ package ec.edu.espe.didactictest.model;
 
 /**
  *
- * @author USER
+ * @author Deniss
  */
 public class Answer {
     private String answer;

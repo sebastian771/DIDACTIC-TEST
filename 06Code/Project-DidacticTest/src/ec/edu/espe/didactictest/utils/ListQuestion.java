@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.didactictest.model;
+package ec.edu.espe.didactictest.utils;
 
 /**
  *
- * @author USER
+ * @author David
  */
-public class ListQuestion {
+public class ListQuestion<T> {
     private Node<T> primero;
     private Node<T> ultimo;
     private int tamanio;

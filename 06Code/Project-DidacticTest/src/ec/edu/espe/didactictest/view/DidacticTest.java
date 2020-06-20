@@ -5,10 +5,26 @@
  */
 package ec.edu.espe.didactictest.view;
 
+import ec.edu.espe.didactictest.model.Test;
+import java.io.IOException;
+
 /**
  *
  * @author USER
  */
 public class DidacticTest {
-    
+    public static void main(String[] args) throws Exception {
+        
+        Test t=new Test();
+        
+        try {
+            t.loadArchive("Question.txt");
+            
+             t.performTest();
+            
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
+        
+    }
 }

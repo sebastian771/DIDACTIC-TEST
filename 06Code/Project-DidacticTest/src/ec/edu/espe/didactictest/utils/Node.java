@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.didactictest.model;
+package ec.edu.espe.didactictest.utils;
 
 /**
  *
- * @author USER
+ * @author Deniss
  */
-public class Node {
+public class Node <T> {
     private T elemento;
     private Node<T> siguiente; 
 

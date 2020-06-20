@@ -1,0 +1,27 @@
+----------------------TEST--------------------------------
+;P;Probando carreras 123...
+ME GUSTA
+ME ES INDIFERENTE
+NO ME GUSTA
+NO CONOZCO
+;R;2
+100
+;P;¿Probando Gustos 123?
+Me gustan los carros
+Aduras penas puedo sumar y restar
+Mejor me hago chapa
+Suicidacion en ingenieria
+;R;1
+200
+;P;¿El rubius tiene mas de 20 millones de suscriptores?
+Se contar del 1 al 100
+Soy milenial
+;R;1
+300
+;P;¿Que es esto?
+No lo c rick parece falso
+Puse en carrera ramdom y me salió esta
+puto el q lo lea
+2+2=4
+;R;1
+200

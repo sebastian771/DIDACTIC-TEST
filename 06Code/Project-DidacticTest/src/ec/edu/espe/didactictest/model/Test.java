@@ -9,8 +9,8 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import List.ListQuestion;
-import Lectura.Read;
+import ec.edu.espe.didactictest.utils.ListQuestion;
+import ec.edu.espe.didactictest.utils.Read;
 
 /**
  *

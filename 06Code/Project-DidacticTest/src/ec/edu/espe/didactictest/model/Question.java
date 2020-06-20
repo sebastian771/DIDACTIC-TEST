@@ -5,10 +5,12 @@
  */
 package ec.edu.espe.didactictest.model;
 
+import ec.edu.espe.didactictest.utils.ListQuestion;
 /**
  *
- * @author USER
+ * @author Roberth
  */
+
 public class Question {
     private String question;
     private ListQuestion<Answer> answers;
