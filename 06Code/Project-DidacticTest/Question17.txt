@@ -1,0 +1,71 @@
+-----------------TEST: MANUAL MECHANICAL--------------------------------
+;P;Te sintes a gusto con un mandil manchado 
+Me Gusta
+Me Hes Indiferente
+No Me Gusta
+No Conozco
+;R;1
+100
+;P;Poses capacidades manuales
+Me Gusta
+Me Hes Indiferente
+No Me Gusta
+No Conozco
+;R;1
+100
+;P;Como te relacionas con el dinamismo
+Me Gusta
+Me Hes Indiferente
+No Me Gusta
+No Conozco
+;R;1
+100
+;P;Como te relacionas con el orden de tus cosas
+Me Gusta
+Me Hes Indiferente
+No Me Gusta
+No Conozco
+;R;2
+100
+;P;Ser independiente me
+Me Gusta
+Me Hes Indiferente
+No Me Gusta
+No Conozco
+;R;1
+100
+;P;Posees capacidads para trabajar en grupo
+Me Gusta
+Me Hes Indiferente
+No Me Gusta
+No Conozco
+;R;1
+100
+;P;Te desenvulves con facilidad
+Me Gusta
+Me Hes Indiferente
+No Me Gusta
+No Conozco
+;R;1
+100
+;P;Presentas predisposición al realizar en equipo continu 
+Me Gusta
+Me Hes Indiferente
+No Me Gusta
+No Conozco
+;R;1
+100
+;P;Estas al día con los movimientos automovilisticos
+Me Gusta
+Me Hes Indiferente
+No Me Gusta
+No Conozco
+;R;1
+100
+;P;Te consideras analista
+Me Gusta
+Me Hes Indiferente
+No Me Gusta
+No Conozco
+;R;1
+100
