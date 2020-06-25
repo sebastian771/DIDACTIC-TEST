@@ -1,8 +1,0 @@
-----------------------TEST--------------------------------
-;P;Probando carreras 123...
-Mecanica
-Administracion
-Turismo
-Software
-;R;2
-100
