@@ -21,23 +21,24 @@ public class Menu2 {
     Scanner writen = new Scanner(System.in);
     
     
-    public void menu2(){
-     //while(option!="4"){
-          System.out.println("DIDACTIC TEST MENU");
-          System.out.println("1.Realizar Didactic Test"); 
-          System.out.println("2.Realizar Test");
-          System.out.println("3.Imprimir Datos");
-          System.out.println("4.Salir");
+    public void menu2(Constructor c){
+     while(option!="4"){
+          System.out.println("Welcome to the DIDACTIC TEST "+c.getUsername());
+          System.out.println("1.Perform Didactic Test"); 
+          System.out.println("2.Take Test");
+          System.out.println("3.Print Data");
+          System.out.println("4.Exit");
           option=writen.nextLine();
           switch(option){
           case "1":
                  //didactic.didacticTest;             
-                 System.out.println("Aun no implementado");
+                 System.out.println("Not yet implemented!!!");
                  break;
           case "2":
               
                 Analysis analysis = new Analysis();
                 analysis.Facultys();
+               
                 Scanner read = new Scanner(System.in);
                 
                 for (int i=0; i< 17; i++)
@@ -45,10 +46,10 @@ public class Menu2 {
                     System.out.println(i+1 + "  " + analysis.camps[i]);;
                 }
                 
-                System.out.println("Ingrese el Test que desea realizar");
-                
+                System.out.println("Enter the Test you want to take");
+                 
                 option=read.nextLine();           
-                
+                analysis.testAnalysis();
                 break;
           case "3":
                 
@@ -63,9 +64,9 @@ public class Menu2 {
                               
           }  
        }
-    
+    }
     public void performTest(){
               
       }
     }
- //}
+ 

@@ -27,23 +27,23 @@ public class Analysis {
     
     public void Facultys(){
                 
-            camps[0]="CIENTÍFICO EXPERIMENTAL";
-            camps[1]="CIENTÍFICO TÉCNICO";           
-            camps[2]="CIENTÍFICO SANITARIO";            
-            camps[3]="TEÓRICO HUMANISTA";            
-            camps[4]="LITERARIO";
-            camps[5]="PSICOPEDAGÓGICO";
-            camps[6]="POLÍTICO SOCIAL";
-            camps[7]="ECONÓMICO EMPRESARIAL";
-            camps[8]="PERSUASIVO COMERCIAL";
-            camps[9]="ADMINISTRATIVO";
-            camps[10]="DEPORTIVO";
-            camps[11]="AGROPECUARIO";
-            camps[12]="ARTÍSTICO MUSICAL";
-            camps[13]="ARTÍSTICO PLÁSTICO";
-            camps[14]="MILITAR SEGURIDAD";
-            camps[15]="AVENTURA RIESGO";
-            camps[16]="MECÁNICO MANUAL";        
+            camps[0]="EXPERIMENTAL SCIENTIST";
+            camps[1]="TECHNICAL SCIENTIST";           
+            camps[2]="HEALTH SCIENTIST";            
+            camps[3]="HUMANIST THEORETICAL";            
+            camps[4]="LITERARY";
+            camps[5]="PSYCHOPEDAGOGICAL";
+            camps[6]="SOCIAL POLITICAL";
+            camps[7]="BUSINESS ECONOMIC";
+            camps[8]="BUSINESS PERSUASIVE";
+            camps[9]="ADMINISTRATIVE";
+            camps[10]="SPORTS";
+            camps[11]="FARMER";
+            camps[12]="MUSICAL ARTISTIC";
+            camps[13]="ARTISTIC PLASTIC";
+            camps[14]="MILITARY SECURITY";
+            camps[15]="RISK ADVENTURE";
+            camps[16]="MANUAL MECHANICAL";        
 }
     
     
@@ -56,7 +56,7 @@ public class Analysis {
         number = menu2.option;       
         int numEntero = Integer.parseInt(number);
         
-        System.out.println("Numero " + number);
+        System.out.println("Number " + number);
         
         switch(number){
             case "0":
@@ -136,15 +136,15 @@ public class Analysis {
     public void Results(){
         
         Test test = new Test();
-        //int totalPoints = test.totalQuestions;
-        System.out.println("Puntos totales: " + totalPoints);
-        System.out.println("Puntos totales2: " + test.totalQuestions);
+        int totalPoints = test.totalQuestions;
+        //System.out.println("Total points: " + totalPoints);
+        //System.out.println("Total Points2: " + test.totalQuestions);
         
         if(totalPoints >= 300){
-            System.out.println("\nTienes las habilidades para esta carrera");
+            System.out.println("\nYou have the skills for this race");
         }
         else{
-            System.out.println("\nNo tienes las habilidades para esta carrera");
+            System.out.println("\nYou don't have the skills for this race");
         }
         
         }
@@ -156,11 +156,11 @@ public class Analysis {
         Menu2 menu2 = new Menu2();       
         number = menu2.option;       
         int numEntero = Integer.parseInt(number);
-        System.out.println("Numero " + number);
+        System.out.println("Number " + number);
         
-        System.out.println("Haz realizado el test de: " +camps[numEntero]);
+        System.out.println("You have taken the test: " +camps[numEntero]);
                 System.out.println("\n------------------------------------");
-                System.out.println("\nResultados:\n");       
+                System.out.println("\nResults:\n");       
                 
                 try {
                     
