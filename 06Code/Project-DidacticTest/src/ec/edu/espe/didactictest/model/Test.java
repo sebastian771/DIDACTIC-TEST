@@ -17,18 +17,28 @@ import ec.edu.espe.didactictest.utils.Read;
  * @author Seabstian
  */
 public class Test {
+
     private ListQuestion<Question> questions;
     public static int totalQuestions;
     private int questionID;
+    public static int totalPoints;
 
     public Test() {
-        questions = new ListQuestion<>();  
+        questions = new ListQuestion<>();
         totalQuestions = 0;
         questionID = 0;
     }
 
     public ListQuestion<Question> getQuestions() {
         return questions;
+    }
+
+    public static int getTotalPoints() {
+        return totalPoints;
+    }
+
+    public static void setTotalPoints(int totalPoints) {
+        Test.totalPoints = totalPoints;
     }
 
     public static int getTotalQuestions() {
@@ -39,8 +49,8 @@ public class Test {
         return questionID;
     }
 
-    public Question nextQuestion() {        
-                   
+    public Question nextQuestion() {
+
         Question question = questions.get(questionID);
 
         if (question != null) {
@@ -50,18 +60,17 @@ public class Test {
     }
 
     public void restartTest() {
-        questionID = 0;        
+        questionID = 0;
         totalQuestions = 0;
     }
 
     public void performTest() {
         Analysis analysis = new Analysis();
-       
-        
+
         if (questions.isEmpty()) {
             System.out.println("No hay preguntas");
         } else {
-           
+
             Read Enterokay = new Read();
 
             int i = 0, answer;
@@ -69,18 +78,16 @@ public class Test {
 
             while (i < questions.size()) {
 
-               
                 question = questions.get(i);
-              
+
                 question.showQuestion();
 
                 answer = Enterokay.pedirIntRango(1, question.getAnswers().size(), "Introduce la respuesta");
 
                 if (question.checkAnswer(answer)) {
                     System.out.println("Has acertado");
-                    totalQuestions += question.getPoints();        
-                   
-                    
+                    totalQuestions += question.getPoints();
+
                 } else {
                     System.out.println("No has acertado");
                 }
@@ -88,12 +95,9 @@ public class Test {
                 i++;
             }
         }
-        
-        analysis.totalPoints += totalQuestions;;
-        System.out.println("Has obtenido " + totalQuestions + " puntos");   
-        System.out.println("Has obtenido " + analysis.totalPoints + " puntos"); 
-        
-        
+
+        totalPoints += totalQuestions;
+
     }
 
     public void loadArchive(String archive) throws FileNotFoundException, IOException {
@@ -113,7 +117,7 @@ public class Test {
 
                 if (line.startsWith(";P;")) {
                     texto_pregunta = line.substring(3);
-                    pregunta = true; 
+                    pregunta = true;
                 } else if (pregunta && line.startsWith(";R;")) {
                     opcioncorrecta = Integer.parseInt(line.substring(3).trim());
                     respuesta = true;
@@ -127,7 +131,7 @@ public class Test {
                         throw new Exception();
                     }
                 }
-                
+
                 if (pregunta && respuesta && puntos && (respuestas.size() >= 2 && respuestas.size() <= 4)) {
 
                     respuestas.get(opcioncorrecta - 1).setCorrectly(true);

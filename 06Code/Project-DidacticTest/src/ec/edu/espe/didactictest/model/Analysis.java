@@ -143,18 +143,26 @@ public class Analysis {
     
     public void Results(){
         
+        Menu2 menu2 = new Menu2();  
+        String number;
+        number = menu2.option; 
+        int numEntero = Integer.parseInt(number);  
         Test test = new Test();
-        int totalPoints = test.totalQuestions;
-        //System.out.println("Total points: " + totalPoints);
+        int totalPoints = test.getTotalQuestions();
+        System.out.println("Total points: " + test.getTotalPoints());
         //System.out.println("Total Points2: " + test.totalQuestions);
         
-        if(totalPoints >= 300){            
+        if(totalPoints >= 7){            
             System.out.println("\nTienes las habilidades para esta carrera");
-            result="\nTienes las habilidades para esta carrera";
+            result="\nTus habilidades para la carrera de:" + camps[numEntero] +"\n"
+                 + "Tu puntuación en esta carreara es del " + test.getTotalPoints()
+                 + "0%";
         }
         else{
             System.out.println("\nNo tienes las habilidades para esta carrera");
-            result="\nNo tienes las habilidades para esta carrera";
+            result="\nTus habilidades para la carrera de:" + camps[numEntero] +"\n"
+                 + "Tu puntuación en esta carreara es del " + test.getTotalPoints()
+                 + "0%";
         }
         
         }
@@ -165,8 +173,7 @@ public class Analysis {
         String number;        
         Menu2 menu2 = new Menu2();       
         number = menu2.option;       
-        int numEntero = Integer.parseInt(number);
-        System.out.println("Number " + number);
+        int numEntero = Integer.parseInt(number);       
         
         System.out.println("You have taken the test: " +camps[numEntero]);
                 System.out.println("\n------------------------------------");
