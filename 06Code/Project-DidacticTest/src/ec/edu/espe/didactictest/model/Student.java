@@ -74,7 +74,7 @@ public class Student {
                     setIndentificationCard(getWrite().nextLine());
                     System.out.println("Enter your school");
                     setSchool(getWrite().nextLine());
-                    System.out.println("Username:");
+                    System.out.println("ID:");
                     setUsername(getWrite().nextLine());
                     File fi = new File("Data.csv");
                     if (fi.exists()) {
@@ -83,7 +83,7 @@ public class Student {
                         String Line;
                         while ((Line = br.readLine()) != null) {
                             String[] contact = Line.split(",");
-                            if (contact[0].equals(getUsername())) {
+                            if (contact[3].equals(getUsername())) {
                                 relogin();
                             }
 
@@ -95,9 +95,10 @@ public class Student {
                     setPassword(getWrite().nextLine());
                     System.out.println("Again the password");
                     setPasswordA(getWrite().nextLine());
-                    Constructor c = new Constructor(getUsername(), getPasswordA());
+                    Constructor c = new Constructor(getName(),getLastName(),getAge(),getIndentificationCard(),
+                    getSchool(),getUsername(), getPasswordA());
                     getW().user(c);
-                    if (getPassword().equals(getPasswordA())) {
+                    if (getIndentificationCard().equals(getUsername())) {
                         System.out.println("You have successfully registered");
                     } else {
                         System.out.println("Not successfully registered :(");
@@ -108,7 +109,7 @@ public class Student {
                 case "2":
 
                     System.out.println("ººDIDACTIC TEST - LOG INºº");
-                    System.out.println("Username:");
+                    System.out.println("ID:");
                     setUsername(getWrite().nextLine());
                     System.out.println("Password:");
                     setPassword(getWrite().nextLine());                    
@@ -119,8 +120,9 @@ public class Student {
                         String Line;
                         while ((Line = br.readLine()) != null) {
                             String[] contact = Line.split(",");
-                            if (contact[0].equals(getUsername()) && contact[1].equals(getPassword())) {
-                                Constructor constructor = new Constructor(getUsername(), getPasswordA());
+                            if (contact[3].equals(getUsername()) && contact[6].equals(getPassword())) {
+                                Constructor constructor = new Constructor(getName(),getLastName(),getAge(),getIndentificationCard(),
+                    getSchool(),getUsername(), getPasswordA());
                                 getMenu().menu2(constructor);
                             }
                         }
@@ -150,7 +152,7 @@ public class Student {
             String Line;
             while ((Line = br.readLine()) != null) {
                 String[] contact = Line.split(",");
-                if (contact[0].equals(getUsername())) {
+                if (contact[3].equals(getUsername())) {
                     System.out.println("This user is already registered try another");
                     System.out.println("Username:");
                     setUsername(getWrite().nextLine());
@@ -179,7 +181,8 @@ public class Student {
     }
 
     public static String getName() {
-        System.out.println("<<<<-<<<<-<-<-<<" + name);
+        /*System.out.println("<<<<-<<<<-<-<-<<" + );
+        return name;*/
         return name;
     }
 

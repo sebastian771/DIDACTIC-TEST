@@ -27,11 +27,15 @@ public class Write {
             fw=new FileWriter(f,true);
             bw=new BufferedWriter(fw);
             bw.newLine(); 
-            bw.write(recent.getUsername()+ ","+recent.getPasswordA());
+            bw.write(recent.getName() +","+recent.getLastName()+","+recent.getAge()
+            +","+recent.getIndentificationCard()+","+recent.getSchool()+","+recent.getUsername()
+            +","+recent.getPasswordA());
             }else{
             fw=new FileWriter(f);
             bw=new BufferedWriter(fw);
-            bw.write(recent.getUsername()+ "," + recent.getPasswordA()); 
+            bw.write(recent.getName() +","+recent.getLastName()+","+recent.getAge()
+            +","+recent.getIndentificationCard()+","+recent.getSchool()+","+recent.getUsername()
+            +","+recent.getPasswordA()); 
             }
             bw.close();
             fw.close();

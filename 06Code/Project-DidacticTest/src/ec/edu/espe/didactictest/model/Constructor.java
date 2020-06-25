@@ -27,10 +27,17 @@ public class Constructor {
     private boolean save;
     private String option; 
 
-    public Constructor(String username, String passwordA) {
+    public Constructor(String name, String lastName, String age, String indentificationCard, String school, String username, String passwordA) {
+        this.name = name;
+        this.lastName = lastName;
+        this.age = age;
+        this.indentificationCard = indentificationCard;
+        this.school = school;
         this.username = username;
         this.passwordA = passwordA;
     }
+
+   
 
     public String getName() {
         return name;

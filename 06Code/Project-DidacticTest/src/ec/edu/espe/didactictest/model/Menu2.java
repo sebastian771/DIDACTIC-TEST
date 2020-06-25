@@ -23,7 +23,7 @@ public class Menu2 {
     
     public void menu2(Constructor c){
      while(option!="4"){
-          System.out.println("Welcome to the DIDACTIC TEST "+c.getUsername());
+          System.out.println("Welcome to the DIDACTIC TEST "+c.getName());
           System.out.println("1.Perform Didactic Test"); 
           System.out.println("2.Take Test");
           System.out.println("3.Print Data");
