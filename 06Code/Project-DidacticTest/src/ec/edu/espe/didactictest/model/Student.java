@@ -99,7 +99,7 @@ public class Student {
                     getSchool(),getUsername(), getPasswordA());
                     getW().user(c);
                     if (getIndentificationCard().equals(getUsername())) {
-                        System.out.println("You have successfully registered");
+                        System.out.println("It has been successfully registered as:" + getName());
                     } else {
                         System.out.println("Not successfully registered :(");
                     }
