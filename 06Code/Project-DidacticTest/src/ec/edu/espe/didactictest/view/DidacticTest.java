@@ -21,8 +21,7 @@ public class DidacticTest {
         
         Analysis analysis = new Analysis();
         Student student = new Student();
-        student.login();
-        
+        student.login();        
         analysis.testAnalysis();
     }
 }

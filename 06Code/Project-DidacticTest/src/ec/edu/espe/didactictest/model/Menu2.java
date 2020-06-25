@@ -5,6 +5,7 @@
  */
 package ec.edu.espe.didactictest.model;
 
+import ec.edu.espe.didactictest.utils.FileManager;
 import java.util.Scanner;
 
 /**
@@ -23,22 +24,23 @@ public class Menu2 {
     
     public void menu2(Constructor c){
      while(option!="4"){
-          System.out.println("Welcome to the DIDACTIC TEST "+c.getName());
+          system("CLS");
+          System.out.println("Welcome to the DIDACTIC TEST "+c.getUsername());
           System.out.println("1.Perform Didactic Test"); 
           System.out.println("2.Take Test");
           System.out.println("3.Print Data");
           System.out.println("4.Exit");
           option=writen.nextLine();
           switch(option){
-          case "1":
-                 //didactic.didacticTest;             
+          case "1": 
+              
                  System.out.println("Not yet implemented!!!");
                  break;
+                 
           case "2":
-              
+                system("CLS");
                 Analysis analysis = new Analysis();
-                analysis.Facultys();
-               
+                analysis.Facultys();               
                 Scanner read = new Scanner(System.in);
                 
                 for (int i=0; i< 17; i++)
@@ -46,14 +48,21 @@ public class Menu2 {
                     System.out.println(i+1 + "  " + analysis.camps[i]);;
                 }
                 
-                System.out.println("Enter the Test you want to take");
-                 
+                System.out.println("Enter the Test you want to take");                 
                 option=read.nextLine();           
                 analysis.testAnalysis();
                 break;
-          case "3":               
+          case "3": 
+                System.out.println("holamundo");
+                Student student = new Student(); 
+                FileManager fileManager = new FileManager();
+                String fileName = student.getUsername()+".txt";  
+                System.out.println(fileName);
+                fileManager.openFileForRead(fileName);              
                 break;
-          case "4":System.exit(0);                   
+          case "4":
+              
+              System.exit(0);                   
                     
                 default:
                     System.out.println("Option not valid, just enter 1, 2 , 3 "
@@ -67,5 +76,9 @@ public class Menu2 {
     public void performTest(){
               
       }
+
+    private void system(String cls) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     }
  

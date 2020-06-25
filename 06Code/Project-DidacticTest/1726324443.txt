@@ -1,0 +1,16 @@
+Analysis{result=
+Tus habilidades para la carrera de:TECHNICAL SCIENTIST
+Tu puntuación en esta carreara es del 20%}
+Name: null
+Lastname: null
+Age: null
+School: null
+Identification:null
+Analysis{result=
+Tus habilidades para la carrera de:HUMANIST THEORETICAL
+Tu puntuación en esta carreara es del 5020%}
+Name: null
+Lastname: null
+Age: null
+School: null
+Identification:null
