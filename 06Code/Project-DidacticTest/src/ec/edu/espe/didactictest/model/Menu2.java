@@ -12,12 +12,18 @@ import java.util.Scanner;
  * @author David Zambrano
  */
 public class Menu2 {
-    
-    String option;
+
+    public static String getOption() {
+        return option;
+    }
+   
+    public static String option;
     Scanner writen = new Scanner(System.in);
-    public void menu2(){
+    
+    
+    public void menu2(Constructor c){
      while(option!="4"){
-          System.out.println("DIDACTIC TEST MENU");
+          System.out.println("Welcome to the DIDACTIC TEST "+c.getUsername());
           System.out.println("1.Realizar Didactic Test"); 
           System.out.println("2.Realizar Test");
           System.out.println("3.Imprimir Datos");
@@ -27,14 +33,28 @@ public class Menu2 {
           case "1":
                  //didactic.didacticTest;             
                  System.out.println("Aun no implementado");
+                 break;
           case "2":
-                //test.test();
-                
-          case "3":
-                //filemanager.print();                             
+              
+                Analysis analysis = new Analysis();
+                analysis.Facultys();
                
-          case "4":System.exit(0);
-                    
+                Scanner read = new Scanner(System.in);
+                
+                for (int i=0; i< 17; i++)
+                {                      
+                    System.out.println(i+1 + "  " + analysis.camps[i]);;
+                }
+                
+                System.out.println("Ingrese el Test que desea realizar");
+                 
+                option=read.nextLine();           
+                analysis.testAnalysis();
+                break;
+          case "3":
+                
+                break;
+          case "4":System.exit(0);                   
                     
                 default:
                     System.out.println("Option not valid, just enter 1, 2 , 3 "
@@ -45,4 +65,8 @@ public class Menu2 {
           }  
        }
     }
- }
+    public void performTest(){
+              
+      }
+    }
+ 

@@ -5,6 +5,11 @@
  */
 package ec.edu.espe.didactictest.model;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Scanner;
 
 /**
@@ -12,68 +17,81 @@ import java.util.Scanner;
  * @author David Zambrano
  */
 public class Student {
-    String name;
-    String lastName;
-    String age;
-    String indentificationCard;
-    String school;
-    String fitness;
-    String inclination;
-    String affinity;
-    String taste;
-    String quality;
-    String username="Unregistered username";
-    String password;
-    String passwordA;
-    boolean confirmation;
+    private String name;
+    private String lastName;
+    private String age;
+    private String indentificationCard;
+    private String school;
+    private String fitness;
+    private String inclination;
+    private String affinity;
+    private String taste;
+    private String quality;
+    private String username;
+    private String password;
+    private String passwordA;
+    private boolean confirmation;
     private boolean save;
     private String option; 
      
      private Scanner write = new Scanner(System.in);
      private Scanner writen = new Scanner(System.in);
-     Menu2 menu = new Menu2();
-     Write w = new Write();
-    public void studentData(){
+     private Menu2 menu = new Menu2();
+     private Write w = new Write();
    
-    }
-    public void login(){
+    public void login() throws FileNotFoundException, IOException{
         
-        while(option !="3"){
+        while(getOption() !="3"){
              try{
-            System.out.println("DIDACTIC TEST - LOG IN");
+            System.out.println("ººDIDACTIC TESTºº");
             System.out.println("1.Register"); 
             System.out.println("2.Log in");
             System.out.println("3.-Exit");
-                option=writen.nextLine();
+            System.out.println("----------------------");
+            System.out.println("Select an option");
+                setOption(getWriten().nextLine());
             }catch(Exception ex){
                  ex.printStackTrace();       
             }
-         switch (option) {
+         switch (getOption()) {
        
           
           case "1":  
-            System.out.println("DIDACTIC TEST - REGISTER");
+            System.out.println("ººDIDACTIC TEST - REGISTERºº");
             System.out.println("Enter your names:");
-            name=write.nextLine();
+            setName(getWrite().nextLine());
             System.out.println("Enter your last name:");
-            lastName=write.nextLine();
+            setLastName(getWrite().nextLine());
             System.out.println("Enter your age:");
-            age=write.nextLine();
+            setAge(getWrite().nextLine());
             System.out.println("Enter your ID:");
-            indentificationCard=write.nextLine();
+            setIndentificationCard(getWrite().nextLine());
             System.out.println("Enter your school");
-            school=write.nextLine();
+            setSchool(getWrite().nextLine());
+            System.out.println("Username:");
+            setUsername(getWrite().nextLine());
+            File fi=new File("Data.csv");
+            if(fi.exists()){
+            FileReader fr=new FileReader(fi);
+            BufferedReader br=new BufferedReader(fr);
+            String Line;
+            while((Line=br.readLine())!=null){
+            String[] contact=Line.split(",");
+            if (contact[0].equals(getUsername())){
+                relogin();
+            }
+              
+            }
             
-            System.out.println("Your username must be your ID number");
-            System.out.println("Username:"); 
-            username=write.nextLine();
+          }
+            
             System.out.println("Password:");
-            password=write.nextLine();
+            setPassword(getWrite().nextLine());
             System.out.println("Again the password");
-            passwordA=write.nextLine();
-            Constructor c = new Constructor(username,passwordA);
-             w.user(c);
-            if(username.equals(indentificationCard)){
+            setPasswordA(getWrite().nextLine());
+            Constructor c = new Constructor(getUsername(), getPasswordA());
+             getW().user(c);
+            if(getPassword().equals(getPasswordA())){
                 System.out.println("You have successfully registered");
             }else{
                 System.out.println("Not successfully registered :(");
@@ -82,26 +100,32 @@ public class Student {
                      break;
                     
                 case "2":                  
+               
+                System.out.println("ººDIDACTIC TEST - LOG INºº");                    
+                System.out.println("Username:");
+                setUsername(getWrite().nextLine());
+                System.out.println("Password:");
+                setPasswordA(getWrite().nextLine());   
+                File f=new File("Data.csv");
+                if(f.exists()){
+                FileReader fr=new FileReader(f);
+                BufferedReader br=new BufferedReader(fr);
+                String Line;
+                while((Line=br.readLine())!=null){
+                String[] contact=Line.split(",");
+                if(contact[0].equals(getUsername()) && contact[1].equals(getPasswordA())){
+                     Constructor constructor= new Constructor(getUsername(), getPasswordA());
+                        getMenu().menu2(constructor);  
+              }
+        }
+   }
+                 System.out.println("You don't have an account yet. "
+                                + "Proceed to register");
                 
-                   System.out.println("DIDACTIC TEST - LOG IN");                    
-                   System.out.println("Username is:" + username);
-                   
-                    if(username.equals(indentificationCard)){
-                   System.out.println("Password:");
-                   if (password.equals(passwordA)){
-                        password=write.nextLine();
-                       menu.menu2();
-                   }
-                  
-                   
-                   }else{
-                    System.out.println("It does not have yet. Sign up!!"); 
-                    }
-                    
-                   break;
-                case "3":
-                    System.exit(0);
-                    
+  break;
+            case "3":
+                System.exit(0);
+                    System.out.println("Thank you for trusting Didactic Test");
                     
                 default:
                     System.out.println("Option not valid, just enter \"1\", "
@@ -111,6 +135,26 @@ public class Student {
 
        }
  }
+    
+    public void relogin() throws FileNotFoundException, IOException{
+        File fi=new File("Data.csv");
+            if(fi.exists()){
+            FileReader fr=new FileReader(fi);
+            BufferedReader br=new BufferedReader(fr);
+            String Line;
+            while((Line=br.readLine())!=null){
+            String[] contact=Line.split(",");
+            if (contact[0].equals(getUsername())){
+                System.out.println("This user is already registered try another");
+                System.out.println("Username:");
+                    setUsername(getWrite().nextLine());
+                relogin();
+            }
+              
+            }
+            
+          }
+    }
     public void deleteAccount(){
         
     }
@@ -122,6 +166,286 @@ public class Student {
     }
     public void edit(){
         
+    }
+
+    /**
+     * @return the name
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * @param name the name to set
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * @return the lastName
+     */
+    public String getLastName() {
+        return lastName;
+    }
+
+    /**
+     * @param lastName the lastName to set
+     */
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    /**
+     * @return the age
+     */
+    public String getAge() {
+        return age;
+    }
+
+    /**
+     * @param age the age to set
+     */
+    public void setAge(String age) {
+        this.age = age;
+    }
+
+    /**
+     * @return the indentificationCard
+     */
+    public String getIndentificationCard() {
+        return indentificationCard;
+    }
+
+    /**
+     * @param indentificationCard the indentificationCard to set
+     */
+    public void setIndentificationCard(String indentificationCard) {
+        this.indentificationCard = indentificationCard;
+    }
+
+    /**
+     * @return the school
+     */
+    public String getSchool() {
+        return school;
+    }
+
+    /**
+     * @param school the school to set
+     */
+    public void setSchool(String school) {
+        this.school = school;
+    }
+
+    /**
+     * @return the fitness
+     */
+    public String getFitness() {
+        return fitness;
+    }
+
+    /**
+     * @param fitness the fitness to set
+     */
+    public void setFitness(String fitness) {
+        this.fitness = fitness;
+    }
+
+    /**
+     * @return the inclination
+     */
+    public String getInclination() {
+        return inclination;
+    }
+
+    /**
+     * @param inclination the inclination to set
+     */
+    public void setInclination(String inclination) {
+        this.inclination = inclination;
+    }
+
+    /**
+     * @return the affinity
+     */
+    public String getAffinity() {
+        return affinity;
+    }
+
+    /**
+     * @param affinity the affinity to set
+     */
+    public void setAffinity(String affinity) {
+        this.affinity = affinity;
+    }
+
+    /**
+     * @return the taste
+     */
+    public String getTaste() {
+        return taste;
+    }
+
+    /**
+     * @param taste the taste to set
+     */
+    public void setTaste(String taste) {
+        this.taste = taste;
+    }
+
+    /**
+     * @return the quality
+     */
+    public String getQuality() {
+        return quality;
+    }
+
+    /**
+     * @param quality the quality to set
+     */
+    public void setQuality(String quality) {
+        this.quality = quality;
+    }
+
+    /**
+     * @return the username
+     */
+    public String getUsername() {
+        return username;
+    }
+
+    /**
+     * @param username the username to set
+     */
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    /**
+     * @return the password
+     */
+    public String getPassword() {
+        return password;
+    }
+
+    /**
+     * @param password the password to set
+     */
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    /**
+     * @return the passwordA
+     */
+    public String getPasswordA() {
+        return passwordA;
+    }
+
+    /**
+     * @param passwordA the passwordA to set
+     */
+    public void setPasswordA(String passwordA) {
+        this.passwordA = passwordA;
+    }
+
+    /**
+     * @return the confirmation
+     */
+    public boolean isConfirmation() {
+        return confirmation;
+    }
+
+    /**
+     * @param confirmation the confirmation to set
+     */
+    public void setConfirmation(boolean confirmation) {
+        this.confirmation = confirmation;
+    }
+
+    /**
+     * @return the save
+     */
+    public boolean isSave() {
+        return save;
+    }
+
+    /**
+     * @param save the save to set
+     */
+    public void setSave(boolean save) {
+        this.save = save;
+    }
+
+    /**
+     * @return the option
+     */
+    public String getOption() {
+        return option;
+    }
+
+    /**
+     * @param option the option to set
+     */
+    public void setOption(String option) {
+        this.option = option;
+    }
+
+    /**
+     * @return the write
+     */
+    public Scanner getWrite() {
+        return write;
+    }
+
+    /**
+     * @param write the write to set
+     */
+    public void setWrite(Scanner write) {
+        this.write = write;
+    }
+
+    /**
+     * @return the writen
+     */
+    public Scanner getWriten() {
+        return writen;
+    }
+
+    /**
+     * @param writen the writen to set
+     */
+    public void setWriten(Scanner writen) {
+        this.writen = writen;
+    }
+
+    /**
+     * @return the menu
+     */
+    public Menu2 getMenu() {
+        return menu;
+    }
+
+    /**
+     * @param menu the menu to set
+     */
+    public void setMenu(Menu2 menu) {
+        this.menu = menu;
+    }
+
+    /**
+     * @return the w
+     */
+    public Write getW() {
+        return w;
+    }
+
+    /**
+     * @param w the w to set
+     */
+    public void setW(Write w) {
+        this.w = w;
     }
 }
 

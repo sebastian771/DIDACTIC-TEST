@@ -18,7 +18,7 @@ import ec.edu.espe.didactictest.utils.Read;
  */
 public class Test {
     private ListQuestion<Question> questions;
-    private int totalQuestions;
+    public static int totalQuestions;
     private int questionID;
 
     public Test() {
@@ -31,7 +31,7 @@ public class Test {
         return questions;
     }
 
-    public int getTotalQuestions() {
+    public static int getTotalQuestions() {
         return totalQuestions;
     }
 
@@ -55,10 +55,12 @@ public class Test {
     }
 
     public void performTest() {
+        Analysis analysis = new Analysis();
+       
+        
         if (questions.isEmpty()) {
             System.out.println("No hay preguntas");
         } else {
-
            
             Read Enterokay = new Read();
 
@@ -76,17 +78,22 @@ public class Test {
 
                 if (question.checkAnswer(answer)) {
                     System.out.println("Has acertado");
-                    totalQuestions += question.getPoints();
+                    totalQuestions += question.getPoints();        
+                   
+                    
                 } else {
                     System.out.println("No has acertado");
                 }
 
                 i++;
             }
-
         }
-
-        System.out.println("Has obtenido " + totalQuestions + " puntos");
+        
+        analysis.totalPoints += totalQuestions;;
+        System.out.println("Has obtenido " + totalQuestions + " puntos");   
+        System.out.println("Has obtenido " + analysis.totalPoints + " puntos"); 
+        
+        
     }
 
     public void loadArchive(String archive) throws FileNotFoundException, IOException {
@@ -120,6 +127,7 @@ public class Test {
                         throw new Exception();
                     }
                 }
+                
                 if (pregunta && respuesta && puntos && (respuestas.size() >= 2 && respuestas.size() <= 4)) {
 
                     respuestas.get(opcioncorrecta - 1).setCorrectly(true);
@@ -147,5 +155,9 @@ public class Test {
 
         buffer.close();
 
+    }
+
+    void totalQuestions() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

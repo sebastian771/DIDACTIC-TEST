@@ -20,7 +20,7 @@ public class Write {
    public void user(Constructor recent){
   
     try{
-            File f=new File("Data.txt");
+            File f=new File("Data.csv");
             FileWriter fw;
             BufferedWriter bw;
             if (f.exists()){
