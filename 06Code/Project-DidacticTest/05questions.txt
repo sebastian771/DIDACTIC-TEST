@@ -1,0 +1,73 @@
+
+;P; 1. Dar clase a niños ciegos, sordos o mentalmente deficientes, utilizando procedimientos especiales. 
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 2. Trabajar como profesor
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 3. Trabajar como profesor de educación especial.
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 4. Analizar las cualidades (estéticas, de expresión, etc.) de obras literarias, artísticas, teatrales o musicales y escribir una crítica expresando el juicio que te has formado sobre ellas. 
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 5. Estudiar la conducta de las personas. Investigar problemas psicológicos en el campo de la educación, de la medicina o d el trabajo. 
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+
+;P; 6. Realizar el trabajo de psicólogo escolar.
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 7. Investigar la naturaleza de los problemas de las personas, teniendo en cuenta los factores sociales, económicos, etc. Y las relaciones de las sociedades humanas.
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 8. Ejercer la profesión de sociólogo. 
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 9. Ejercer la profesión de fisioterapeuta. 
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
