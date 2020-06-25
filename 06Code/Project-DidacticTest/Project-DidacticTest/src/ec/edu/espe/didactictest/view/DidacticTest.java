@@ -6,6 +6,9 @@
 package ec.edu.espe.didactictest.view;
 
 import ec.edu.espe.didactictest.model.Test;
+import ec.edu.espe.didactictest.model.Analysis;
+import ec.edu.espe.didactictest.model.Menu2;
+import ec.edu.espe.didactictest.model.Student;
 import java.io.IOException;
 
 /**
@@ -15,16 +18,12 @@ import java.io.IOException;
 public class DidacticTest {
     public static void main(String[] args) throws Exception {
         
-        Test t=new Test();
         
-        try {
-            t.loadArchive("Question.txt");
-            
-             t.performTest();
-            
-        } catch (IOException ex) {
-            System.out.println(ex.getMessage());
-        }
+        Analysis analysis = new Analysis();
+        Student student = new Student();
+        Menu2 menu2 = new Menu2();     
+        menu2.menu2();
         
+        analysis.testAnalysis();
     }
 }
