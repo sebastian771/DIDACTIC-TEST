@@ -1,0 +1,20 @@
+Analysis{result=
+No tienes las habilidades para esta carrera}
+Analysis{result=
+No tienes las habilidades para esta carrera}
+Analysis{result=
+No tienes las habilidades para esta carrera}
+Analysis{result=
+No tienes las habilidades para esta carrera}
+Name: null
+Lastname: null
+Age: null
+School: null
+Identification:null
+Analysis{result=
+No tienes las habilidades para esta carrera}
+Name: null
+Lastname: null
+Age: null
+School: null
+Identification:null

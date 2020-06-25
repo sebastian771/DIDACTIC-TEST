@@ -17,169 +17,174 @@ import java.util.Scanner;
  * @author David Zambrano
  */
 public class Student {
-    private String name;
+    
+    
+
+    public static String name;
+ 
     private String lastName;
     private String age;
     private String indentificationCard;
     private String school;
-    private String fitness;
-    private String inclination;
-    private String affinity;
-    private String taste;
-    private String quality;
-    private String username;
+    private String fitness; 
+    private String inclination; 
+    private String affinity; 
+    private String taste; 
+    private String quality; 
+    public static String username;
     private String password;
     private String passwordA;
     private boolean confirmation;
     private boolean save;
-    private String option; 
-     
-     private Scanner write = new Scanner(System.in);
-     private Scanner writen = new Scanner(System.in);
-     private Menu2 menu = new Menu2();
-     private Write w = new Write();
-   
-    public void login() throws FileNotFoundException, IOException{
-        
-        while(getOption() !="3"){
-             try{
-            System.out.println("ººDIDACTIC TESTºº");
-            System.out.println("1.Register"); 
-            System.out.println("2.Log in");
-            System.out.println("3.-Exit");
-            System.out.println("----------------------");
-            System.out.println("Select an option");
+    private String option;
+
+    private Scanner write = new Scanner(System.in);
+
+    
+    private Scanner writen = new Scanner(System.in);
+    private Menu2 menu = new Menu2();
+    private Write w = new Write();
+
+    public void login() throws FileNotFoundException, IOException {
+
+        while (getOption() != "3") {
+            try {
+                System.out.println("ººDIDACTIC TESTºº");
+                System.out.println("1.Register");
+                System.out.println("2.Log in");
+                System.out.println("3.-Exit");
+                System.out.println("----------------------");
+                System.out.println("Select an option");
                 setOption(getWriten().nextLine());
-            }catch(Exception ex){
-                 ex.printStackTrace();       
+            } catch (Exception ex) {
+                ex.printStackTrace();
             }
-         switch (getOption()) {
-       
-          
-          case "1":  
-            System.out.println("ººDIDACTIC TEST - REGISTERºº");
-            System.out.println("Enter your names:");
-            setName(getWrite().nextLine());
-            System.out.println("Enter your last name:");
-            setLastName(getWrite().nextLine());
-            System.out.println("Enter your age:");
-            setAge(getWrite().nextLine());
-            System.out.println("Enter your ID:");
-            setIndentificationCard(getWrite().nextLine());
-            System.out.println("Enter your school");
-            setSchool(getWrite().nextLine());
-            System.out.println("Username:");
-            setUsername(getWrite().nextLine());
-            File fi=new File("Data.csv");
-            if(fi.exists()){
-            FileReader fr=new FileReader(fi);
-            BufferedReader br=new BufferedReader(fr);
-            String Line;
-            while((Line=br.readLine())!=null){
-            String[] contact=Line.split(",");
-            if (contact[0].equals(getUsername())){
-                relogin();
-            }
-              
-            }
-            
-          }
-            
-            System.out.println("Password:");
-            setPassword(getWrite().nextLine());
-            System.out.println("Again the password");
-            setPasswordA(getWrite().nextLine());
-            Constructor c = new Constructor(getUsername(), getPasswordA());
-             getW().user(c);
-            if(getPassword().equals(getPasswordA())){
-                System.out.println("You have successfully registered");
-            }else{
-                System.out.println("Not successfully registered :(");
-            }
-       
-                     break;
-                    
-                case "2":                  
-               
-                System.out.println("ººDIDACTIC TEST - LOG INºº");                    
-                System.out.println("Username:");
-                setUsername(getWrite().nextLine());
-                System.out.println("Password:");
-                setPassword(getWrite().nextLine());   
-                File f=new File("Data.csv");
-                if(f.exists()){
-                FileReader fr=new FileReader(f);
-                BufferedReader br=new BufferedReader(fr);
-                String Line;
-                while((Line=br.readLine())!=null){
-                String[] contact=Line.split(",");
-                if(contact[0].equals(getUsername()) && contact[1].equals(getPassword())){
-                     Constructor constructor= new Constructor(getUsername(), getPasswordA());
-                        getMenu().menu2(constructor);  
-              }
-        }
-   }
-                 System.out.println("You don't have an account yet. "
-                                + "Proceed to register");
-                
-  break;
-            case "3":
-                System.exit(0);
+            switch (getOption()) {
+
+                case "1":
+                    Scanner read = new Scanner(System.in);
+                    System.out.println("ººDIDACTIC TEST - REGISTERºº");
+                    System.out.println("Enter your names:");
+                    setName(getWrite().nextLine());
+                    System.out.println("Enter your last name:");
+                    setLastName(getWrite().nextLine());
+                    System.out.println("Enter your age:");
+                    setAge(getWrite().nextLine());
+                    System.out.println("Enter your ID:");
+                    setIndentificationCard(getWrite().nextLine());
+                    System.out.println("Enter your school");
+                    setSchool(getWrite().nextLine());
+                    System.out.println("Username:");
+                    setUsername(getWrite().nextLine());
+                    File fi = new File("Data.csv");
+                    if (fi.exists()) {
+                        FileReader fr = new FileReader(fi);
+                        BufferedReader br = new BufferedReader(fr);
+                        String Line;
+                        while ((Line = br.readLine()) != null) {
+                            String[] contact = Line.split(",");
+                            if (contact[0].equals(getUsername())) {
+                                relogin();
+                            }
+
+                        }
+
+                    }
+
+                    System.out.println("Password:");
+                    setPassword(getWrite().nextLine());
+                    System.out.println("Again the password");
+                    setPasswordA(getWrite().nextLine());
+                    Constructor c = new Constructor(getUsername(), getPasswordA());
+                    getW().user(c);
+                    if (getPassword().equals(getPasswordA())) {
+                        System.out.println("You have successfully registered");
+                    } else {
+                        System.out.println("Not successfully registered :(");
+                    }
+
+                    break;
+
+                case "2":
+
+                    System.out.println("ººDIDACTIC TEST - LOG INºº");
+                    System.out.println("Username:");
+                    setUsername(getWrite().nextLine());
+                    System.out.println("Password:");
+                    setPassword(getWrite().nextLine());                    
+                    File f = new File("Data.csv");
+                    if (f.exists()) {
+                        FileReader fr = new FileReader(f);
+                        BufferedReader br = new BufferedReader(fr);
+                        String Line;
+                        while ((Line = br.readLine()) != null) {
+                            String[] contact = Line.split(",");
+                            if (contact[0].equals(getUsername()) && contact[1].equals(getPassword())) {
+                                Constructor constructor = new Constructor(getUsername(), getPasswordA());
+                                getMenu().menu2(constructor);
+                            }
+                        }
+                    }
+                    System.out.println("You don't have an account yet. "
+                            + "Proceed to register");
+
+                    break;
+                case "3":
+                    System.exit(0);
                     System.out.println("Thank you for trusting Didactic Test");
-                    
+
                 default:
                     System.out.println("Option not valid, just enter \"1\", "
                             + "\"2\" or \"3\"");
                     break;
             }
 
-       }
- }
-    
-    public void relogin() throws FileNotFoundException, IOException{
-        File fi=new File("Data.csv");
-            if(fi.exists()){
-            FileReader fr=new FileReader(fi);
-            BufferedReader br=new BufferedReader(fr);
-            String Line;
-            while((Line=br.readLine())!=null){
-            String[] contact=Line.split(",");
-            if (contact[0].equals(getUsername())){
-                System.out.println("This user is already registered try another");
-                System.out.println("Username:");
-                    setUsername(getWrite().nextLine());
-                relogin();
-            }
-              
-            }
-            
-          }
-    }
-    public void deleteAccount(){
-        
-    }
-    public void registerCapacities(){
-        
-    }
-    public boolean saveData(){
-        return false;
-    }
-    public void edit(){
-        
+        }
     }
 
-    /**
-     * @return the name
-     */
-    public String getName() {
+    public void relogin() throws FileNotFoundException, IOException {
+        File fi = new File("Data.csv");
+        if (fi.exists()) {
+            FileReader fr = new FileReader(fi);
+            BufferedReader br = new BufferedReader(fr);
+            String Line;
+            while ((Line = br.readLine()) != null) {
+                String[] contact = Line.split(",");
+                if (contact[0].equals(getUsername())) {
+                    System.out.println("This user is already registered try another");
+                    System.out.println("Username:");
+                    setUsername(getWrite().nextLine());
+                    relogin();
+                }
+
+            }
+
+        }
+    }
+
+    public void deleteAccount() {
+
+    }
+
+    public void registerCapacities() {
+
+    }
+
+    public boolean saveData() {
+        return false;
+    }
+
+    public void edit() {
+
+    }
+
+    public static String getName() {
+        System.out.println("<<<<-<<<<-<-<-<<" + name);
         return name;
     }
 
-    /**
-     * @param name the name to set
-     */
-    public void setName(String name) {
-        this.name = name;
+    public static void setName(String name) {
+        Student.name = name;
     }
 
     /**
@@ -447,12 +452,14 @@ public class Student {
     public void setW(Write w) {
         this.w = w;
     }
+    
+    
+    @Override
+    public String toString() {
+        return "Name: " + getName() +"\nLastname: " + lastName + "\nAge: " + age + 
+              "\nSchool: " + school + "\nIdentification:" + indentificationCard; //To change body of generated methods, choose Tools | Templates.
+    }    
+   // public String toStrings() {
+      //  return name;
+   // }//
 }
-
- 
-
-
-
-
-
-

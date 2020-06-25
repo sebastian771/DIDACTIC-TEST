@@ -5,6 +5,7 @@
  */
 package ec.edu.espe.didactictest.model;
 
+import ec.edu.espe.didactictest.utils.FileManager;
 import java.io.IOException;
 
 /**
@@ -16,6 +17,7 @@ public class Analysis {
     
     String [ ] camps = new String [17];
     int totalPoints;
+    String result;
     
     public int getTotalPints() {
         return totalPoints;
@@ -61,26 +63,32 @@ public class Analysis {
         switch(number){
             case "0":
                 testOption();
-                Results();                
+                Results();
+                saveTest();
+                
             break;
             
             case "1":
                 testOption();
-                Results();                
+                Results(); 
+                saveTest();
             break;
             
             case "2":
                 testOption();
                 Results();
+                saveTest();
             break;
             
             case "3":
                 testOption();
                 Results();
+                saveTest();
             break;
             case "4":
                 testOption();
                 Results();
+                saveTest();
             break;
             case "5":
                 testOption();
@@ -140,11 +148,13 @@ public class Analysis {
         //System.out.println("Total points: " + totalPoints);
         //System.out.println("Total Points2: " + test.totalQuestions);
         
-        if(totalPoints >= 300){
-            System.out.println("\nYou have the skills for this race");
+        if(totalPoints >= 300){            
+            System.out.println("\nTienes las habilidades para esta carrera");
+            result="\nTienes las habilidades para esta carrera";
         }
         else{
-            System.out.println("\nYou don't have the skills for this race");
+            System.out.println("\nNo tienes las habilidades para esta carrera");
+            result="\nNo tienes las habilidades para esta carrera";
         }
         
         }
@@ -172,6 +182,23 @@ public class Analysis {
                 }
         
         }
+    
+        public void saveTest(){
+            FileManager fileManager = new FileManager();
+            Student student = new Student();            
+            //System.out.println(student.getUsername()+"----------a--------a");
+            String fileName = student.getUsername()+".txt"; 
+            System.out.println("probando" + fileName);
+            fileManager.createFile(fileName);            
+            fileManager.writeString(toString(), student.toString() ,fileName);
+            
+            
+        }
+        
+    @Override
+    public String toString() {
+        return "Analysis{" + "result=" + result + '}';
+    }    
     }
     
     

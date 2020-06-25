@@ -51,8 +51,7 @@ public class Menu2 {
                 option=read.nextLine();           
                 analysis.testAnalysis();
                 break;
-          case "3":
-                
+          case "3":               
                 break;
           case "4":System.exit(0);                   
                     

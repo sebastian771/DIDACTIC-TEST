@@ -10,7 +10,7 @@ package ec.edu.espe.didactictest.model;
  * @author David Zambrano
  */
 public class Constructor {
-   private String name;
+    private String name;
     private String lastName;
     private String age;
     private String indentificationCard;
