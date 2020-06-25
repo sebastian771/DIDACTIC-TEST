@@ -105,7 +105,7 @@ public class Student {
                 System.out.println("Username:");
                 setUsername(getWrite().nextLine());
                 System.out.println("Password:");
-                setPasswordA(getWrite().nextLine());   
+                setPassword(getWrite().nextLine());   
                 File f=new File("Data.csv");
                 if(f.exists()){
                 FileReader fr=new FileReader(f);
@@ -113,7 +113,7 @@ public class Student {
                 String Line;
                 while((Line=br.readLine())!=null){
                 String[] contact=Line.split(",");
-                if(contact[0].equals(getUsername()) && contact[1].equals(getPasswordA())){
+                if(contact[0].equals(getUsername()) && contact[1].equals(getPassword())){
                      Constructor constructor= new Constructor(getUsername(), getPasswordA());
                         getMenu().menu2(constructor);  
               }
