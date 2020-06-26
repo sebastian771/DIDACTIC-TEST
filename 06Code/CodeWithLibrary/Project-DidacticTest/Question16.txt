@@ -1,0 +1,79 @@
+;P; 1. Prevenir o apagar incendios, proteger o salvar a las personas durante éstos. Estudiar los riesgos que puedan producirlos, para eliminarlos
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 2. Ser agente de seguridad. 
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 3. Ser submarinista profesional.
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+;P; 4. Descender a cavernas profundas para estudiar las características de la tierra. 
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 5. Trabajar como geólogo profesional. 
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 6. Coordinar las actividades a bordo de un barco. Dirigir las maniobras de entrada y salida de puerto.
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+
+;P;  7. Determinar que personas son adecuadas para realizar determinados estudios o trabajos, estudiando sus aptitudes y su personalidad.
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 8. Ser ingeniero forestal 
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 9. Ser bombero. 
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 10. Prevenir, mantener y restaurar la seguridad y el orden público. Velar por la seguridad de las personas y de sus bienes.
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO  CONOZCO
+;R;2
+1

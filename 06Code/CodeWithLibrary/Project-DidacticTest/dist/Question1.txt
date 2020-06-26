@@ -1,0 +1,79 @@
+;P; 1. Hacer pronósticos sobre la dirección de las masas de aire, temperatura y humedad del ambiente. 
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 2. Ejercer la profesión de biólogo.
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 3. Realizar investigaciones sobre la distribución de las razas humanas y la organización política, social y económica de determinadas zonas. 
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 4. Visitar a los profesionales de la medicina para mostrarles productos farmacéuticos, teniendo la preparación teórica y los conocimientos necesarios para explicar sus características. 
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 5. Estudiar la vida vegetal (árboles y plantas). Hacer experimentos con los cultivos. 
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 6. Aplicar los conocimientos de medicina para el tratamiento de las afecciones dentales. Localizar lesiones de la dentadura, empastes, etc. 
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 7. Investigar por medio de la ciencia estadística. Realizar estudios en el campo de las matemáticas. 
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO  CONOZCO
+;R;2
+1
+
+;P; 8. Participar en viajes espaciales, tanto en su preparación como en su realización. Tripular cohetes. 
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 9. Realizar intervenciones quirúrgicas para curar enfermedades o accidentes.
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 10. Investigar en el laboratorio sobre las causas del desarrollo de las enfermedades. 
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1

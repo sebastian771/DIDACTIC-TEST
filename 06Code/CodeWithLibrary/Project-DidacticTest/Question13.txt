@@ -1,0 +1,84 @@
+;P; 1. Tocar uno o varios instrumentos musicales actuando como solista o formando parte de una orquesta o de un grupo musical. 
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 3. Dirigir una orquesta, banda de música o conjunto. Elegir las composiciones que se van a interpretar.
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 4. Ser cantante profesional.
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 5. Ser músico
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 6.Creacion de Melodias.
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+
+;P; 6.Creacion de Melodias.
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+
+;P; 7.Estudio de partituras.
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+
+;P; 8.Creacion Ritmos.
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+
+;P; 9. EStudio tecnico de la musica.
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+
+;P; 10.Escribir canciones.
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1

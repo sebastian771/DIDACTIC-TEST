@@ -1,0 +1,79 @@
+;P; 1. Realizar anotaciones contables, preparar relaciones de pagos y cobros. Cobrar, pagar y comprobar que esto se ha hecho correctamente.
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 2. Hacer canotaje grupal o individual (kayak). 
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 3. Recibir a los clientes de un hotel o restaurante. Proporcionarles la información que necesitan. 
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 4. Trabajar como director de ventas.
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 5. Organizar las tareas de los empleados del departamento administrativo, distribuyendo el trabajo y controlando su realización
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 6. Aplicar la informática para analizar necesidades y problemas. Elaborar programas para computadora. 
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 7. Ser vendedor profesional. 
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 8. En las ventas de mercancías, recibir el dinero que entregan los clientes y devolver el cambio. Utilizar máquinas registradoras y entregar facturas de las cantidades recibidas.
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 9. Ser teleoperador. 
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 10. Ejercer la profesión de publicista. 
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1

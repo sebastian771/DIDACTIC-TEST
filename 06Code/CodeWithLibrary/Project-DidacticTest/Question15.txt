@@ -1,0 +1,81 @@
+;P; 1. Formar parte del gobierno de un país. Intervenir en debates, preparación de leyes, decretos, etc. 
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 2. Prestar servicios de protección, seguridad y vigilancia en haciendas, establecimientos, oficinas, etc
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+
+
+;P; 3. Trabajar como seguridad en el palacio de justicia.  
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 4. Ser detective profesional. 
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 5. Prevenir, mantener y restaurar la seguridad y el orden público. Velar por la seguridad de las personas y de sus bienes.
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO  CONOZCO
+;R;2
+1
+
+;P; 6. Trabajar como oficial de prisiones. 
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 7. Ser salvavidas. 
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 8. Estudiar, proyectos y construir puentes, presas, túneles, instalaciones telegráficas, fábricas, etc.  
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 9. Seguridad Informatica  
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 10. Registro de riesgos para personas naturales
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
