@@ -17,8 +17,6 @@ import java.io.IOException;
  */
 public class DidacticTest {
     public static void main(String[] args) throws Exception {
-        
-        
         Analysis analysis = new Analysis();
         Student student = new Student();
         student.login();        

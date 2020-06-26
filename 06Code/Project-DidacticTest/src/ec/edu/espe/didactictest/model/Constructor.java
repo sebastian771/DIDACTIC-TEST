@@ -10,6 +10,7 @@ package ec.edu.espe.didactictest.model;
  * @author David Zambrano
  */
 public class Constructor {
+    
     private String name;
     private String lastName;
     private String age;
@@ -27,17 +28,16 @@ public class Constructor {
     private boolean save;
     private String option; 
 
-    public Constructor(String name, String lastName, String age, String indentificationCard, String school, String username, String passwordA) {
+    public Constructor(String name, String lastName, String age, String indentificationCard,
+                       String school, String username, String passwordA) {        
         this.name = name;
         this.lastName = lastName;
         this.age = age;
         this.indentificationCard = indentificationCard;
         this.school = school;
         this.username = username;
-        this.passwordA = passwordA;
-    }
-
-   
+        this.passwordA = passwordA;        
+    }   
 
     public String getName() {
         return name;
@@ -165,9 +165,7 @@ public class Constructor {
 
     public void setOption(String option) {
         this.option = option;
-    }
-
-  
+    }  
 }
     
   
