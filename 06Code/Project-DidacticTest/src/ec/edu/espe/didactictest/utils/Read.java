@@ -22,36 +22,32 @@ public class Read {
         sc.useDelimiter("\n"); 
         sc.useLocale(Locale.US); 
     }   
-
   
     public int pedirInt() {
-
         int num = 0;
         boolean correcto;
+        
         do {
             correcto = true;
             try {
-                System.out.println("Introduce un numero entero integer");
+                System.out.println("Enter a integer number");
                 num = sc.nextInt();
-            } catch (InputMismatchException ex) {
-        
+            } catch (InputMismatchException ex) {        
                 correcto = false;
                 sc.next();
             }
-
             
             if (!correcto) {
-                System.out.println("Error, introducce un numero entero integer");
+                System.out.println("Error, enter an integer");
             }
 
         } while (!correcto);
-
+        
         return num;
     }
 
    
-    public int pedirInt(String mensaje) {
-
+    public int pedirInt(String mensaje) {        
         int num = 0;
         boolean correcto;
         do {
@@ -59,103 +55,95 @@ public class Read {
             try {
                 System.out.println(mensaje);
                 num = sc.nextInt();
-            } catch (InputMismatchException ex) {
-              
+            } catch (InputMismatchException ex) {              
                 correcto = false;
                 sc.next();
             }
-
-         
+            
             if (!correcto) {
-                System.out.println("Error, introducce un numero entero integer");
+                System.out.println("Error, enter an integer");
             }
 
         } while (!correcto);
-
+        
         return num;
     }
 
   
     public int pedirInt(String mensaje, String mensajeError) {
-
         int num = 0;
         boolean correcto;
+        
         do {
             correcto = true;
             try {
                 System.out.println(mensaje);
                 num = sc.nextInt();
-            } catch (InputMismatchException ex) {
-             
+            } catch (InputMismatchException ex) {             
                 correcto = false;
                 sc.next();
             }
-
         
             if (!correcto) {
                 System.out.println(mensajeError);
             }
-
         } while (!correcto);
-
+        
         return num;
     }
 
    
     public int pedirIntPositivo() {
-
         int num;
+        
         do {
             try {
-                System.out.println("Introduce un numero entero positivo integer");
+                    System.out.println("Enter a positive integer");
                 num = sc.nextInt();
-            } catch (InputMismatchException ex) {
-             
+            } catch (InputMismatchException ex) {             
                 num = -1;
                 sc.next();
             }
 
             if (num < 0) {
-                System.out.println("Error, introducce un numero entero positivo integer");
+                System.out.println("Error, enter a positive integer");
             }
 
         } while (num < 0);
-
+        
         return num;
     }
 
   
     public int pedirIntPositivo(String mensaje) {
-
         int num;
+        
         do {
             try {
                 System.out.println(mensaje);
                 num = sc.nextInt();
-            } catch (InputMismatchException ex) {
-             
+            } catch (InputMismatchException ex) {             
                 num = -1;
                 sc.next();
             }
 
             if (num < 0) {
-                System.out.println("Error, introducce un numero entero positivo integer");
+                System.out.println("Error, enter a positive integer");
             }
 
         } while (num < 0);
-
+        
         return num;
     }
  
     public int pedirIntPositivo(String mensaje, String mensajeError) {
-
         int num;
+        
         do {
             try {
                 System.out.println(mensaje);
                 num = sc.nextInt();
-            } catch (InputMismatchException ex) {
-         
+            } catch (InputMismatchException ex) {         
                 num = -1;
                 sc.next();
             }
@@ -165,7 +153,7 @@ public class Read {
             }
 
         } while (num < 0);
-
+        
         return num;
     }
 
@@ -174,7 +162,7 @@ public class Read {
         int num;
         do {
             try {
-                System.out.println("Introduce un numero entero negativo integer");
+                System.out.println("Enter a negative integer");
                 num = sc.nextInt();
             } catch (InputMismatchException ex) {
           
@@ -183,7 +171,7 @@ public class Read {
             }
 
             if (num >= 0) {
-                System.out.println("Error, introducce un numero entero negativo integer");
+                System.out.println("Error, enter a negative integer");
             }
 
         } while (num >= 0);
@@ -205,7 +193,7 @@ public class Read {
             }
 
             if (num >= 0) {
-                System.out.println("Error, introducce un numero entero negativo integer");
+                System.out.println("Error, enter a negative integer");
             }
 
         } while (num >= 0);
@@ -237,7 +225,6 @@ public class Read {
  
     public int pedirIntRango(int minimo, int maximo) {
         int num;
-
      
         if (minimo > maximo) {
             int aux = minimo;
@@ -247,16 +234,15 @@ public class Read {
 
         do {
             try {
-                System.out.println("Introduce un numero integer entre " + minimo + " y " + maximo);
+                System.out.println("Enter an integer number between " + minimo + " & " + maximo);
                 num = sc.nextInt();
-            } catch (InputMismatchException ex) {
-            
+            } catch (InputMismatchException ex) {            
                 num = maximo + 1;
                 sc.next();
             }
 
             if (!(num >= minimo && num <= maximo)) {
-                System.out.println("Error, Introduce un numero integer entre " + minimo + " y " + maximo);
+                System.out.println("Error, Enter an integer number between " + minimo + " & " + maximo);
             }
 
         } while (!(num >= minimo && num <= maximo));
@@ -267,7 +253,6 @@ public class Read {
   
     public int pedirIntRango(int minimo, int maximo, String mensaje) {
         int num;
-
      
         if (minimo > maximo) {
             int aux = minimo;
@@ -279,14 +264,13 @@ public class Read {
             try {
                 System.out.println(mensaje);
                 num = sc.nextInt();
-            } catch (InputMismatchException ex) {
-                
+            } catch (InputMismatchException ex) {                
                 num = maximo + 1;
                 sc.next();
             }
 
             if (!(num >= minimo && num <= maximo)) {
-                System.out.println("Error, Introduce un numero integer entre " + minimo + " y " + maximo);
+                System.out.println("Error, Enter an integer number between " + minimo + " & " + maximo);
             }
 
         } while (!(num >= minimo && num <= maximo));
@@ -308,8 +292,7 @@ public class Read {
             try {
                 System.out.println(mensaje);
                 num = sc.nextInt();
-            } catch (InputMismatchException ex) {
-    
+            } catch (InputMismatchException ex) {    
                 num = maximo + 1;
                 sc.next();
             }
@@ -321,10 +304,5 @@ public class Read {
         } while (!(num >= minimo && num <= maximo));
 
         return num;
-    }
-
-
-       
-    
-    
+    }       
 }
