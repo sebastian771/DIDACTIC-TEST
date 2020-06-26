@@ -50,7 +50,6 @@ public class Test {
     }
 
     public Question nextQuestion() {
-
         Question question = questions.get(questionID);
 
         if (question != null) {
@@ -65,10 +64,8 @@ public class Test {
     }
 
     public void performTest() {
-        Analysis analysis = new Analysis();
-
         if (questions.isEmpty()) {
-            System.out.println("No hay preguntas");
+            System.out.println("There are no questions to display");
         } else {
 
             Read Enterokay = new Read();
@@ -82,39 +79,35 @@ public class Test {
 
                 question.showQuestion();
 
-                answer = Enterokay.pedirIntRango(1, question.getAnswers().size(), "Introduce la respuesta");
+                answer = Enterokay.pedirIntRango(1, question.getAnswers().size()
+                                                  , "Enter the answer");
 
                 if (question.checkAnswer(answer)) {
                     System.out.println("Has acertado");
                     totalQuestions += question.getPoints();
-
                 } else {
                     System.out.println("No has acertado");
                 }
-
                 i++;
             }
         }
-
         totalPoints += totalQuestions;
-
     }
 
     public void loadArchive(String archive) throws FileNotFoundException, IOException {
 
         BufferedReader buffer = new BufferedReader(new FileReader(archive));
-
-        String line;
-        Question question;
         ListQuestion<Answer> respuestas = new ListQuestion<>();
-        String texto_pregunta = "";
+        
+        String line;
+        Question question;        
+        String texto_pregunta = "";        
         int puntosPregunta = 0, opcioncorrecta = 0;
         boolean pregunta = false, respuesta = false, puntos = false;
 
         while ((line = buffer.readLine()) != null) {
 
             try {
-
                 if (line.startsWith(";P;")) {
                     texto_pregunta = line.substring(3);
                     pregunta = true;
@@ -144,24 +137,19 @@ public class Test {
                     respuesta = false;
                     puntos = false;
                     respuestas = new ListQuestion<>();
-
                 }
 
             } catch (Exception ex) {
-
                 pregunta = false;
                 respuesta = false;
                 puntos = false;
                 respuestas = new ListQuestion<>();
             }
-
         }
-
         buffer.close();
-
     }
 
     void totalQuestions() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 }

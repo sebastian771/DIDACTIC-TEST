@@ -12,6 +12,7 @@ import ec.edu.espe.didactictest.utils.ListQuestion;
  */
 
 public class Question {
+    
     private String question;
     private ListQuestion<Answer> answers;
     private int points;
@@ -32,16 +33,14 @@ public class Question {
 
     public int getPoints() {
         return points;
-    }
-    
+    }    
     
     public void showQuestion(){
         System.out.println(question);
         
         int i=0;
         
-        while(i<answers.size()){
-            
+        while(i<answers.size()){            
             System.out.println("\t  " + (i+1) + answers.get(i));
             i++;
         }
