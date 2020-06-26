@@ -19,10 +19,10 @@ import java.util.Scanner;
 public class Student {
     
     public static String name; 
-    private String lastName;
-    private String age;
-    private String indentificationCard;
-    private String school;
+    public static String lastName;
+    public static String age;
+    public static String indentificationCard;
+    public static String school;
     private String fitness; 
     private String inclination; 
     private String affinity; 
@@ -68,8 +68,10 @@ public class Student {
                     setAge(getWrite().nextLine());                    
                     System.out.println("Enter your school");
                     setSchool(getWrite().nextLine());
-                    System.out.println("Enter your: ID = Username");
+                    System.out.println("Enter your School ID:");
                     setUsername(getWrite().nextLine());
+                    System.out.println("Enter your: ID = Username");
+                    setIndentificationCard(getWrite().nextLine());                    
                     
                     File fi = new File("Data.csv");
                     
@@ -82,7 +84,7 @@ public class Student {
                         while ((Line = br.readLine()) != null) {
                             String[] contact = Line.split(",");
                             
-                            if (contact[3].equals(getUsername())) {
+                            if (contact[3].equals(getUsername())) {                                
                                 relogin();
                             }
                         }
@@ -129,6 +131,11 @@ public class Student {
                             if (contact[3].equals(getUsername()) && contact[6].equals(getPassword())) {
                                 Associate constructor = new Associate(getName(),getLastName(),getAge(),getIndentificationCard(),
                                 getSchool(),getUsername(), getPasswordA());
+                                
+                                name = contact[0];
+                                lastName = contact[1];
+                                age = contact[2];
+                                school = contact[4];                                
                                 
                                 getMenu().menu2(constructor);
                             }

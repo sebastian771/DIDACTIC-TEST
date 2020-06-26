@@ -148,18 +148,18 @@ public class Analysis {
         String number;             
                 
         number = menu2.option; 
-        int numEntero = Integer.parseInt(number);
+        int numInteger = Integer.parseInt(number) -1;
         
         System.out.println("Total points: " + test.getTotalPoints());      
 
         if (totalPoints >= 7) {
             System.out.println("\nTienes las habilidades para esta carrera");
-            result = "\nTus habilidades para la carrera de:" + camps[numEntero] 
+            result = "\nTus habilidades para la carrera de:" + camps[numInteger] 
                     + "\nTu puntuación en esta carreara es del " + 
                     test.getTotalPoints() + "0%";
         } else {
             System.out.println("\nNo tienes las habilidades para esta carrera");
-            result = "\nTus habilidades para la carrera de:" + camps[numEntero] 
+            result = "\nTus habilidades para la carrera de:" + camps[numInteger] 
                     + "\nTu puntuación en esta carreara es del " + 
                     test.getTotalPoints() + "0%";
         }
@@ -171,10 +171,10 @@ public class Analysis {
         DTMenu menu2 = new DTMenu();
         
         String number;        
-        number = menu2.option;
+        number = menu2.option;        
         int integer = Integer.parseInt(number);
-
-        System.out.println("You have taken the test: " + camps[integer]);
+        
+        System.out.println("You have taken the test: " + camps[integer-1]);
         System.out.println("\n------------------------------------");
         System.out.println("\nResults:\n");
 

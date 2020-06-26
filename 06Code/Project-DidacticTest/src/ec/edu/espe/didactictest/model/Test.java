@@ -64,9 +64,31 @@ public class Test {
     }
 
     public void performTest() {
+        
         if (questions.isEmpty()) {
-            System.out.println("There are no questions to display");
-        } else 
+            System.out.println("No questions");
+        } else {
+           
+            Validation Enterokay = new Validation();
+
+            int i = 0, answer;
+            Question question;
+
+            while (i < questions.size()) {
+                
+                question = questions.get(i);
+              
+                question.showQuestion();
+
+                answer = Enterokay.pedirIntRango(1, question.getAnswers().size(), "Enter the answer");
+                
+                if (question.checkAnswer(answer)) {                    
+                    totalQuestions += question.getPoints(); 
+                } else {
+                    }
+                i++;
+            }
+        }
         totalPoints += totalQuestions;
     }
 
