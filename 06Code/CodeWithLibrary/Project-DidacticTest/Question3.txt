@@ -1,0 +1,71 @@
+-----------------TEST: HUMANIST THEORETICAL--------------------------------
+;P;Te sintes a gusto analizando lo que t cuentan tus amigos 
+Me Gusta
+Me Hes Indiferente
+No Me Gusta
+No Conozco
+;R;1
+100
+;P;Posees capacidades del escucha
+Me Gusta
+Me Hes Indiferente
+No Me Gusta
+No Conozco
+;R;1
+100
+;P;Como te relacionas con el dinamismo
+Me Gusta
+Me Hes Indiferente
+No Me Gusta
+No Conozco
+;R;1
+100
+;P;Como te relacionas con el orden de tus cosas
+Me Gusta
+Me Hes Indiferente
+No Me Gusta
+No Conozco
+;R;2
+100
+;P;No ser independiente 
+Me Gusta
+Me Hes Indiferente
+No Me Gusta
+No Conozco
+;R;3
+100
+;P;Posees capacidads para analizar los problemas de los demás
+Me Gusta
+Me Hes Indiferente
+No Me Gusta
+No Conozco
+;R;1
+100
+;P;Te desenvulves con facilidad ante una dificultad presente
+Me Gusta
+Me Hes Indiferente
+No Me Gusta
+No Conozco
+;R;1
+100
+;P;Presentas predisposición al convrsar con una persona 
+Me Gusta
+Me Hes Indiferente
+No Me Gusta
+No Conozco
+;R;1
+100
+;P;Estas al día con las problematicas en las personas
+Me Gusta
+Me Hes Indiferente
+No Me Gusta
+No Conozco
+;R;1
+100
+;P;Te consideras un buen oyente
+Me Gusta
+Me Hes Indiferente
+No Me Gusta
+No Conozco
+;R;1
+100

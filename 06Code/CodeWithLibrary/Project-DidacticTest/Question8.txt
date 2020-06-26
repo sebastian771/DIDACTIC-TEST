@@ -1,0 +1,80 @@
+;P; 1. Asesorar sobre problemas contables y financieros. Organizar y dirigir los servicios de control de presupuestos y contabilidad. 
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 3. Dirigir un establecimiento comercial propio, organizando y planificando las operaciones de compra y venta de mercancías. 
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 109. Ser gerente de una empresa.
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 4. Proyectar, crear o diseñar anuncios publicitarios
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+
+;P; 5. Establecer el plan de una empresa, teniendo en cuenta su situación, resultados y perspectivas futuras. 
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 6. Trabajar como auditor profesional. 
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 7. Contratar pólizas de seguros. Entrevistarse con el cliente, determinar la clase de seguro que necesita y formalizar las pólizas. 
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+
+
+;P; 8. Organizar y controlar la recepción, almacenamiento y expedición de mercancías, anotando las entradas y las salidas. 
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 9. Trabajar como digitador.
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 10. Participar en competiciones deportivas de diverso tipo.
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1

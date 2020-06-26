@@ -1,0 +1,79 @@
+;P; 1. Escribir novelas, cuentos, relatos u obras literarias para su publicación. 
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 2. Ser escritor profesional.
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 3. Coordinar la redacción de una publicación (revista, periódico, etc.) examinando los trabajos que se presenten y seleccionando los que se van a publicar. Determinar su colocación en la página. Redactar los titulares, etc. 
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 4. Crear y realizar dibujos acompañándolos con frases. Realizar ilustraciones para los libros. 
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 5. Dar clases en un colegio, en un instituto o en la universidad.
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 6. Ser novelista.
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 7. Preparar pruebas, exámenes y evaluaciones y calificar a los alumnos que los realizan. 
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+ ;P; 8. Crear y escribir composiciones y canciones
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+
+;P; 9. Ser actor profesional. 
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+
+1;P; 10. Entrevistar a personas para publicar sus respuestas en la prensa, en la radio o en la televisión. 
+ ME GUSTA
+ ME ES INDIFERENTE
+ NO ME GUSTA
+ NO CONOZCO
+;R;2
+1
+

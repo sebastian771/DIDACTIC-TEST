@@ -5,7 +5,7 @@
  */
 package ec.edu.espe.didactictest.model;
 
-import ec.edu.espe.didactictest.utils.FileManager;
+import ec.edu.espe.filemanagerlibrary.FileManager;
 import java.io.IOException;
 
 /**

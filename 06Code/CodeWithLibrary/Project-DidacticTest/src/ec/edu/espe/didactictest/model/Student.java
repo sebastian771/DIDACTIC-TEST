@@ -102,10 +102,11 @@ public class Student {
                     getW().user(c);
                     
                     if (getIndentificationCard().equals(getUsername())) {
+                        System.out.println("Not successfully registered :(");
+                    } else {
+                        
                         System.out.println("It has been successfully registered as:" 
                                           + getName());
-                    } else {
-                        System.out.println("Not successfully registered :(");
                     }
 
                     break;
