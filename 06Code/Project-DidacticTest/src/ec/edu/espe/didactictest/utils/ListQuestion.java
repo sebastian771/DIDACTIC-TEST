@@ -10,22 +10,22 @@ package ec.edu.espe.didactictest.utils;
  * @author David
  */
 public class ListQuestion<T> {
-    private Node<T> primero;
-    private Node<T> ultimo;
-    private int tamanio;
+    private Node<T> first;
+    private Node<T> latest;
+    private int size;
 
     public ListQuestion() {
-        primero = null;
-        ultimo = null;
-        tamanio = 0;
+        first = null;
+        latest = null;
+        size = 0;
     }
     
     public boolean isEmpty() {
-        return tamanio == 0;
+        return size == 0;
     }
     
     public int size() {
-        return tamanio;
+        return size;
     }
     
     public T get(int index) {       
@@ -36,9 +36,9 @@ public class ListQuestion<T> {
         } else if (index == size() - 1) {
             return getLast(); 
         } else {            
-            Node<T> buscado = getNode(index);
+            Node<T> wanted = getNode(index);
 
-            return buscado.getElemento();
+            return wanted.getElement();
         }
     }
     
@@ -46,7 +46,7 @@ public class ListQuestion<T> {
         if (isEmpty()) {
             return null;
         } else {
-            return primero.getElemento();
+            return first.getElement();
         }
     }
 
@@ -55,7 +55,7 @@ public class ListQuestion<T> {
         if (isEmpty()) {
             return null;
         } else {
-            return ultimo.getElemento();
+            return latest.getElement();
         }
     }
     
@@ -63,67 +63,67 @@ public class ListQuestion<T> {
         if (isEmpty() || (index < 0 || index >= size())) {
             return null;
         } else if (index == 0) {
-            return primero; 
+            return first; 
         } else if (index == size() - 1) {
-            return ultimo; 
+            return latest; 
         } else {
-            Node<T> buscado = primero;
+            Node<T> wanted = first;
             
-            int contador = 0;
-            while (contador < index) {
-                contador++;
-                buscado = buscado.getSiguiente();
+            int counter = 0;
+            while (counter < index) {
+                counter++;
+                wanted = wanted.getNext();
             }            
-            return buscado;
+            return wanted;
         }
     }
     
-    public T addLast(T elemento) {
+    public T addLast(T element) {
         Node<T> aux;
         
         if (isEmpty()) {
-            return addFirst(elemento);
+            return addFirst(element);
         } else {            
-            aux = new Node<>(elemento, null);
-            ultimo.setSiguiente(aux);
-            ultimo = aux;
+            aux = new Node<>(element, null);
+            latest.setNext(aux);
+            latest = aux;
         }       
-        tamanio++;
-        return ultimo.getElemento();
+        size++;
+        return latest.getElement();
     }
 
-    public T addFirst(T elemento) {
+    public T addFirst(T element) {
         Node<T> aux;
         
         if (isEmpty()) {
-            aux = new Node<>(elemento, null);
-            primero = aux;
-            ultimo = aux;
+            aux = new Node<>(element, null);
+            first = aux;
+            latest = aux;
         } else {   
-            Node<T> primeroActual = primero;
-            aux = new Node<>(elemento, primeroActual);
-            primero = aux;
+            Node<T> firstCurrent = first;
+            aux = new Node<>(element, firstCurrent);
+            first = aux;
         }
-        tamanio++;
-        return primero.getElemento();
+        size++;
+        return first.getElement();
     }
 
-      public T add(T elemento, int index) {
+      public T add(T element, int index) {
 
         if (index == 0) {
-            return addFirst(elemento); 
+            return addFirst(element); 
         } else if (index == size()) {
-            return addLast(elemento); 
+            return addLast(element); 
         } else if ((index < 0 || index >= size())) {
             return null;
         } else {
             
-            Node<T> buscado_anterior = getNode(index - 1);            
-            Node<T> buscado_actual = getNode(index);            
-            Node<T> aux = new Node<>(elemento, buscado_actual);            
-            buscado_anterior.setSiguiente(aux);            
-            tamanio++;
-            return getNode(index).getElemento();
+            Node<T> searchedPrevious = getNode(index - 1);            
+            Node<T> searchedCurrent = getNode(index);            
+            Node<T> aux = new Node<>(element, searchedCurrent);            
+            searchedPrevious.setNext(aux);            
+            size++;
+            return getNode(index).getElement();
 
         }
 
@@ -131,51 +131,51 @@ public class ListQuestion<T> {
       
     public String toString() {
 
-        String contenido = "";
+        String content = "";
 
         if (isEmpty()) {
-            contenido = "Lista vacia";
+            content = "Lista vacia";
         } else {
-            Node<T> aux = primero;
+            Node<T> aux = first;
             
             while (aux != null) {
-                contenido += aux.toString();
-                aux = aux.getSiguiente();
+                content += aux.toString();
+                aux = aux.getNext();
             }
         }
-        return contenido;
+        return content;
     }
 
-    public boolean exists(T elemento) {
+    public boolean exists(T element) {
 
         if (isEmpty()) {
             return false;
         } else {
-            Node<T> aux = primero;
+            Node<T> aux = first;
 
             while (aux != null) {
-                if (elemento.equals(aux.getElemento())) { 
+                if (element.equals(aux.getElement())) { 
                     return true; 
                 }
-                aux = aux.getSiguiente();
+                aux = aux.getNext();
             }
             return false;
         }
     }
     
-    public int indexOf(T elemento) {
+    public int indexOf(T element) {
         if (isEmpty()) {
             return -1;
         } else {
-            Node<T> aux = primero;
+            Node<T> aux = first;
 
-            int posicion = 0;
+            int position = 0;
             while (aux != null) {
-                if (elemento.equals(aux.getElemento())) { 
-                    return posicion; 
+                if (element.equals(aux.getElement())) { 
+                    return position; 
                 }
-                posicion++;
-                aux = aux.getSiguiente();
+                position++;
+                aux = aux.getNext();
             }
             return -1;
         }
@@ -185,18 +185,18 @@ public class ListQuestion<T> {
         if (isEmpty()) {
             return null;
         } else {            
-            T elemento = primero.getElemento();
+            T element = first.getElement();
             
-            Node<T> aux = primero.getSiguiente();
-            primero = null; 
-            primero = aux; 
+            Node<T> aux = first.getNext();
+            first = null; 
+            first = aux; 
 
             if (size() == 1) {
-                ultimo = null;
+                latest = null;
             }
-            tamanio--;
+            size--;
 
-            return elemento;
+            return element;
         }
     }
 
@@ -205,26 +205,26 @@ public class ListQuestion<T> {
         if (isEmpty()) {
             return null;
         } else {
-            T elemento = ultimo.getElemento();
+            T element = latest.getElement();
 
             Node<T> aux = getNode(size() - 2);
         
             if (aux == null) {
-                ultimo = null;
+                latest = null;
  
                 if (size() == 2) {
-                    ultimo = primero;
+                    latest = first;
                 } else {
-                    primero = null;
+                    first = null;
                 }
             } else {                
-                ultimo = null;
-                ultimo = aux;
-                ultimo.setSiguiente(null);
+                latest = null;
+                latest = aux;
+                latest.setNext(null);
             }
-            tamanio--;
+            size--;
 
-            return elemento;
+            return element;
         }
     }
 
@@ -238,34 +238,34 @@ public class ListQuestion<T> {
         } else if (index == size() - 1) {
             return removeLast();
         } else {
-            Node<T> nodo_anterior = getNode(index - 1);
+            Node<T> nodoPrevious = getNode(index - 1);
 
-            Node<T> nodo_actual = getNode(index);
+            Node<T> nodoCurrent = getNode(index);
 
-            T elemento = nodo_actual.getElemento();
+            T element = nodoCurrent.getElement();
 
-            Node<T> nodo_siguiente = nodo_actual.getSiguiente();
+            Node<T> nodoNext = nodoCurrent.getNext();
 
-            nodo_actual = null;
+            nodoCurrent = null;
 
-            nodo_anterior.setSiguiente(nodo_siguiente);
+            nodoPrevious.setNext(nodoNext);
 
-            tamanio--;
+            size--;
 
-            return elemento;
+            return element;
         }
     }
 
   
-    public T modify(T elemento, int index) {
+    public T modify(T element, int index) {
         if (isEmpty() || (index < 0 || index >= size())) {
             return null;
         } else {
             Node<T> aux = getNode(index);
 
-            aux.setElemento(elemento);
+            aux.setElement(element);
 
-            return aux.getElemento();
+            return aux.getElement();
         }
     }    
 }

@@ -10,34 +10,34 @@ package ec.edu.espe.didactictest.utils;
  * @author Deniss
  */
 public class Node <T> {
-    private T elemento;
-    private Node<T> siguiente; 
+    private T element;
+    private Node<T> next; 
 
  
-    public Node(T elemento, Node<T> siguiente) {
-        this.elemento = elemento;
-        this.siguiente = siguiente;
+    public Node(T element, Node<T> next) {
+        this.element = element;
+        this.next = next;
     }
 
-    public T getElemento() {
-        return elemento;
+    public T getElement() {
+        return element;
     }
 
-    public void setElemento(T elemento) {
-        this.elemento = elemento;
+    public void setElement(T element) {
+        this.element = element;
     }
 
-    public Node<T> getSiguiente() {
-        return siguiente;
+    public Node<T> getNext() {
+        return next;
     }
 
-    public void setSiguiente(Node<T> siguiente) {
-        this.siguiente = siguiente;
+    public void setNext(Node<T> next) {
+        this.next = next;
     }
 
     @Override
     public String toString() {
-        return elemento + "\n";
+        return element + "\n";
     }
     
 }

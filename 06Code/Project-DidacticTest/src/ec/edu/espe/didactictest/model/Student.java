@@ -37,8 +37,8 @@ public class Student {
     
     private Scanner write = new Scanner(System.in);    
     private Scanner writen = new Scanner(System.in);
-    private Menu2 menu = new Menu2();
-    private Write w = new Write();
+    private DTMenu menu = new DTMenu();
+    private Writer w = new Writer();
 
     public void login() throws FileNotFoundException, IOException {
 
@@ -93,7 +93,7 @@ public class Student {
                     System.out.println("Again the password:");
                     setPasswordA(getWrite().nextLine());
                     
-                    Constructor c = new Constructor(getName(),getLastName(),
+                    Associate c = new Associate(getName(),getLastName(),
                                      getAge(),getIndentificationCard(),
                                      getSchool(),getUsername(), getPasswordA());
                     
@@ -127,7 +127,7 @@ public class Student {
                             String[] contact = Line.split(",");
                             
                             if (contact[3].equals(getUsername()) && contact[6].equals(getPassword())) {
-                                Constructor constructor = new Constructor(getName(),getLastName(),getAge(),getIndentificationCard(),
+                                Associate constructor = new Associate(getName(),getLastName(),getAge(),getIndentificationCard(),
                                 getSchool(),getUsername(), getPasswordA());
                                 
                                 getMenu().menu2(constructor);
@@ -425,28 +425,28 @@ public class Student {
     /**
      * @return the menu
      */
-    public Menu2 getMenu() {
+    public DTMenu getMenu() {
         return menu;
     }
 
     /**
      * @param menu the menu to set
      */
-    public void setMenu(Menu2 menu) {
+    public void setMenu(DTMenu menu) {
         this.menu = menu;
     }
 
     /**
      * @return the w
      */
-    public Write getW() {
+    public Writer getW() {
         return w;
     }
 
     /**
      * @param w the w to set
      */
-    public void setW(Write w) {
+    public void setW(Writer w) {
         this.w = w;
     }
     

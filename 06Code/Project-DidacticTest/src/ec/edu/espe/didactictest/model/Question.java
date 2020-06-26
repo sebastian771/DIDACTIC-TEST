@@ -14,10 +14,10 @@ import ec.edu.espe.didactictest.utils.ListQuestion;
 public class Question {
     
     private String question;
-    private ListQuestion<Answer> answers;
+    private ListQuestion<Reply> answers;
     private int points;
     
-    public Question(String question, ListQuestion<Answer> answers, int points) {
+    public Question(String question, ListQuestion<Reply> answers, int points) {
         this.question = question;
         this.answers = answers;
         this.points = points;
@@ -27,7 +27,7 @@ public class Question {
         return question;
     }
 
-    public ListQuestion<Answer> getAnswers() {
+    public ListQuestion<Reply> getAnswers() {
         return answers;
     }
 
@@ -47,7 +47,7 @@ public class Question {
     }
         
     public boolean checkAnswer(int answer){
-        Answer nr1 = answers.get(answer - 1);
+        Reply nr1 = answers.get(answer - 1);
         
         if (nr1 != null)
         {

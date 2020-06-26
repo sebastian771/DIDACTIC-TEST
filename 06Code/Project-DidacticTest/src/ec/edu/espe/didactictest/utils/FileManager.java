@@ -19,8 +19,8 @@ public class FileManager {
 
     public boolean removeFile(String fileName) {
         try {
-            File fichero = new File(fileName);
-            if (fichero.delete()) {
+            File file = new File(fileName);
+            if (file.delete()) {
                 System.out.println("Erase archive");
             } else {
                 System.out.println("Error");
@@ -52,6 +52,7 @@ public class FileManager {
                     archivetxt.createNewFile();
                 } catch (IOException ex) {
                     Logger.getLogger(DidacticTest.class.getName()).log(Level.SEVERE, null, ex);
+                    //DidacticTest= Java Class...
                 }
             } else {
                 System.out.println("Archive ---->" + fileName + "<---- Alredy exist");
@@ -83,6 +84,7 @@ public class FileManager {
                     write.close();
                 } catch (IOException ex) {
                     Logger.getLogger(DidacticTest.class.getName()).log(Level.SEVERE, null, ex);
+                    //DidacticTest= Java Class...
                 }
             } else {
                 try {
@@ -94,6 +96,7 @@ public class FileManager {
                     write.close();
                 } catch (IOException ex) {
                     Logger.getLogger(DidacticTest.class.getName()).log(Level.SEVERE, null, ex);
+                    //DidacticTest= Java Class...
                 }
             }
             return true;
@@ -107,13 +110,13 @@ public class FileManager {
         try {
             String data = "";
             System.out.println("reading from File " + fileName);
-            String cadena;
+            String string;
             
             FileReader f = new FileReader(fileName);
             BufferedReader b = new BufferedReader(f);
             
-            while ((cadena = b.readLine()) != null) {
-                System.out.println(cadena);
+            while ((string = b.readLine()) != null) {
+                System.out.println(string);
             }            
             b.close();
             return data;

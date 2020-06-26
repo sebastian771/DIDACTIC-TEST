@@ -44,7 +44,7 @@ public class Analysis {
 
         String number;
         Test t = new Test();
-        Menu2 menu2 = new Menu2();
+        DTMenu menu2 = new DTMenu();
         
         number = menu2.option;          
 
@@ -143,7 +143,7 @@ public class Analysis {
 
     public void Results() {
 
-        Menu2 menu2 = new Menu2();
+        DTMenu menu2 = new DTMenu();
         Test test = new Test();
         String number;             
                 
@@ -168,18 +168,18 @@ public class Analysis {
 
     public void testOption() {
         Test t = new Test();
-        Menu2 menu2 = new Menu2();
+        DTMenu menu2 = new DTMenu();
         
         String number;        
         number = menu2.option;
-        int numEntero = Integer.parseInt(number);
+        int integer = Integer.parseInt(number);
 
-        System.out.println("You have taken the test: " + camps[numEntero]);
+        System.out.println("You have taken the test: " + camps[integer]);
         System.out.println("\n------------------------------------");
         System.out.println("\nResults:\n");
 
         try {
-            t.loadArchive("Question" + numEntero + ".txt");
+            t.loadArchive("Question" + integer + ".txt");
             t.performTest();
         } catch (IOException ex) {
             System.out.println(ex.getMessage());

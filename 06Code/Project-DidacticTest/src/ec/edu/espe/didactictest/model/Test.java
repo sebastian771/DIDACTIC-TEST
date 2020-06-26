@@ -10,7 +10,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import ec.edu.espe.didactictest.utils.ListQuestion;
-import ec.edu.espe.didactictest.utils.Read;
+import ec.edu.espe.didactictest.utils.Validation;
 
 /**
  *
@@ -66,84 +66,60 @@ public class Test {
     public void performTest() {
         if (questions.isEmpty()) {
             System.out.println("There are no questions to display");
-        } else {
-
-            Read Enterokay = new Read();
-
-            int i = 0, answer;
-            Question question;
-
-            while (i < questions.size()) {
-
-                question = questions.get(i);
-
-                question.showQuestion();
-
-                answer = Enterokay.pedirIntRango(1, question.getAnswers().size()
-                                                  , "Enter the answer");
-
-                if (question.checkAnswer(answer)) {
-                    System.out.println("Has acertado");
-                    totalQuestions += question.getPoints();
-                } else {
-                    System.out.println("No has acertado");
-                }
-                i++;
-            }
-        }
+        } else 
         totalPoints += totalQuestions;
     }
 
     public void loadArchive(String archive) throws FileNotFoundException, IOException {
 
         BufferedReader buffer = new BufferedReader(new FileReader(archive));
-        ListQuestion<Answer> respuestas = new ListQuestion<>();
+        ListQuestion<Reply> replys = new ListQuestion<>();
         
         String line;
         Question question;        
-        String texto_pregunta = "";        
-        int puntosPregunta = 0, opcioncorrecta = 0;
-        boolean pregunta = false, respuesta = false, puntos = false;
+        String text_question = "";        
+        int pointsQuestion = 0, opcioncorrecta = 0;
+        boolean questionBoolean = false, replyBoolean = false, pointsBoolean = false;
 
         while ((line = buffer.readLine()) != null) {
 
             try {
                 if (line.startsWith(";P;")) {
-                    texto_pregunta = line.substring(3);
-                    pregunta = true;
-                } else if (pregunta && line.startsWith(";R;")) {
+                    text_question = line.substring(3);
+                    questionBoolean = true;
+                } else if (questionBoolean && line.startsWith(";R;")) {
                     opcioncorrecta = Integer.parseInt(line.substring(3).trim());
-                    respuesta = true;
-                } else if (respuesta) {
-                    puntosPregunta = Integer.parseInt(line.trim());
-                    puntos = true;
-                } else if (pregunta) {
-                    respuestas.addLast(new Answer(line));
+                    replyBoolean = true;
+                } else if (replyBoolean) {
+                    pointsQuestion = Integer.parseInt(line.trim());
+                    pointsBoolean = true;
+                } else if (questionBoolean) {
+                    replys.addLast(new Reply(line));
 
-                    if (respuestas.size() > 4) {
+                    if (replys.size() > 4) {
                         throw new Exception();
                     }
                 }
 
-                if (pregunta && respuesta && puntos && (respuestas.size() >= 2 && respuestas.size() <= 4)) {
+                if (questionBoolean && replyBoolean && pointsBoolean && (replys.size() >= 2 && replys.size() <= 4)) {
 
-                    respuestas.get(opcioncorrecta - 1).setCorrectly(true);
+                    replys.get(opcioncorrecta - 1).setCorrectly(true);
 
-                    question = new Question(texto_pregunta, respuestas, puntosPregunta);
+                    question = new Question(text_question, replys, pointsQuestion);
 
                     questions.addLast(question);
 
-                    pregunta = false;
-                    respuesta = false;
-                    puntos = false;
-                    respuestas = new ListQuestion<>();
+                    questionBoolean = false;
+                    replyBoolean = false;
+                    pointsBoolean = false;
+                    replys = new ListQuestion<>();
                 }
 
             } catch (Exception ex) {
-                pregunta = false;
-                respuesta = false;
-                puntos = false;
-                respuestas = new ListQuestion<>();
+                questionBoolean = false;
+                replyBoolean = false;
+                pointsBoolean = false;
+                replys = new ListQuestion<>();
             }
         }
         buffer.close();
