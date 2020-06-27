@@ -49,7 +49,7 @@ public class QuestionTest {
         String result = instance.getQuestion();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-       // fail("The test case is a prototype.");
+        fail("The test case is a prototype.");
     }
 
     /**
@@ -63,7 +63,7 @@ public class QuestionTest {
         ListQuestion<Reply> result = instance.getAnswers();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
+        fail("The test case is a prototype.");
     }
 
     /**
@@ -77,7 +77,7 @@ public class QuestionTest {
         int result = instance.getPoints();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
+        fail("The test case is a prototype.");
     }
 
     /**
@@ -89,7 +89,7 @@ public class QuestionTest {
         Question instance = null;
         instance.showQuestion();
         // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
+        fail("The test case is a prototype.");
     }
 
     /**
@@ -100,11 +100,11 @@ public class QuestionTest {
         System.out.println("checkAnswer");
         int answer = 0;
         Question instance = null;
-        boolean expResult = true;
+        boolean expResult = false;
         boolean result = instance.checkAnswer(answer);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
+        fail("The test case is a prototype.");
     }
     
 }

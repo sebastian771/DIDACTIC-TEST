@@ -190,7 +190,7 @@ public class Analysis {
         FileManager fileManager = new FileManager();
         Student student = new Student();
         
-        String fileName = student.getUsername() + ".txt";
+        String fileName = student.getName() + ".txt";
         
         fileManager.createFile(fileName);
         fileManager.writeString(toString(), student.toString(), fileName);

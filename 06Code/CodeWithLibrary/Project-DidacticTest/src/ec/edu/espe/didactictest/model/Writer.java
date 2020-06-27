@@ -18,7 +18,7 @@ public class Writer {
     public void user(Associate recent) {
 
         try {
-            File f = new File("Data.csv");
+            File f = new File("UserRecords.csv");
             FileWriter fw;
             BufferedWriter bw;
 
@@ -27,13 +27,13 @@ public class Writer {
                 bw = new BufferedWriter(fw);
                 bw.newLine();
                 bw.write(recent.getName() + "," + recent.getLastName() + "," + recent.getAge()
-                        + "," + recent.getIndentificationCard() + "," + recent.getSchool() + "," + recent.getUsername()
+                        + "," + recent.getSchool() + "," + recent.getID_Username()
                         + "," + recent.getPasswordA());
             } else {
                 fw = new FileWriter(f);
                 bw = new BufferedWriter(fw);
                 bw.write(recent.getName() + "," + recent.getLastName() + "," + recent.getAge()
-                        + "," + recent.getIndentificationCard() + "," + recent.getSchool() + "," + recent.getUsername()
+                        + "," + recent.getSchool() + "," + recent.getID_Username()
                         + "," + recent.getPasswordA());
             }
             bw.close();

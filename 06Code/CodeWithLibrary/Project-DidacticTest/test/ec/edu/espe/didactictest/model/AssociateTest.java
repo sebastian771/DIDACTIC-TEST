@@ -119,33 +119,6 @@ public class AssociateTest {
     }
 
     /**
-     * Test of getIndentificationCard method, of class Associate.
-     */
-    @Test
-    public void testGetIndentificationCard() {
-        System.out.println("getIndentificationCard");
-        Associate instance = null;
-        String expResult = "";
-        String result = instance.getIndentificationCard();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of setIndentificationCard method, of class Associate.
-     */
-    @Test
-    public void testSetIndentificationCard() {
-        System.out.println("setIndentificationCard");
-        String indentificationCard = "";
-        Associate instance = null;
-        instance.setIndentificationCard(indentificationCard);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
      * Test of getSchool method, of class Associate.
      */
     @Test
@@ -173,163 +146,28 @@ public class AssociateTest {
     }
 
     /**
-     * Test of getFitness method, of class Associate.
+     * Test of getID_Username method, of class Associate.
      */
     @Test
-    public void testGetFitness() {
-        System.out.println("getFitness");
+    public void testGetID_Username() {
+        System.out.println("getID_Username");
         Associate instance = null;
         String expResult = "";
-        String result = instance.getFitness();
+        String result = instance.getID_Username();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of setFitness method, of class Associate.
+     * Test of setID_Username method, of class Associate.
      */
     @Test
-    public void testSetFitness() {
-        System.out.println("setFitness");
-        String fitness = "";
-        Associate instance = null;
-        instance.setFitness(fitness);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of getInclination method, of class Associate.
-     */
-    @Test
-    public void testGetInclination() {
-        System.out.println("getInclination");
-        Associate instance = null;
-        String expResult = "";
-        String result = instance.getInclination();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of setInclination method, of class Associate.
-     */
-    @Test
-    public void testSetInclination() {
-        System.out.println("setInclination");
-        String inclination = "";
-        Associate instance = null;
-        instance.setInclination(inclination);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of getAffinity method, of class Associate.
-     */
-    @Test
-    public void testGetAffinity() {
-        System.out.println("getAffinity");
-        Associate instance = null;
-        String expResult = "";
-        String result = instance.getAffinity();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of setAffinity method, of class Associate.
-     */
-    @Test
-    public void testSetAffinity() {
-        System.out.println("setAffinity");
-        String affinity = "";
-        Associate instance = null;
-        instance.setAffinity(affinity);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of getTaste method, of class Associate.
-     */
-    @Test
-    public void testGetTaste() {
-        System.out.println("getTaste");
-        Associate instance = null;
-        String expResult = "";
-        String result = instance.getTaste();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of setTaste method, of class Associate.
-     */
-    @Test
-    public void testSetTaste() {
-        System.out.println("setTaste");
-        String taste = "";
-        Associate instance = null;
-        instance.setTaste(taste);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of getQuality method, of class Associate.
-     */
-    @Test
-    public void testGetQuality() {
-        System.out.println("getQuality");
-        Associate instance = null;
-        String expResult = "";
-        String result = instance.getQuality();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of setQuality method, of class Associate.
-     */
-    @Test
-    public void testSetQuality() {
-        System.out.println("setQuality");
-        String quality = "";
-        Associate instance = null;
-        instance.setQuality(quality);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of getUsername method, of class Associate.
-     */
-    @Test
-    public void testGetUsername() {
-        System.out.println("getUsername");
-        Associate instance = null;
-        String expResult = "";
-        String result = instance.getUsername();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of setUsername method, of class Associate.
-     */
-    @Test
-    public void testSetUsername() {
-        System.out.println("setUsername");
+    public void testSetID_Username() {
+        System.out.println("setID_Username");
         String username = "";
         Associate instance = null;
-        instance.setUsername(username);
+        instance.setID_Username(username);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }

@@ -10,6 +10,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.Reader;
 import java.util.Scanner;
 
 /**
@@ -21,14 +22,8 @@ public class Student {
     public static String name; 
     public static String lastName;
     public static String age;
-    public static String indentificationCard;
     public static String school;
-    private String fitness; 
-    private String inclination; 
-    private String affinity; 
-    private String taste; 
-    private String quality; 
-    public static String username;
+    public static String id_username;
     private String password;
     private String passwordA;
     private boolean confirmation;
@@ -44,36 +39,45 @@ public class Student {
 
         while (getOption() != "3") {
             try {
-                System.out.println("---------ººDIDACTIC TESTºº---------");
-                System.out.println("1.Register");
-                System.out.println("2.Log in");
-                System.out.println("3.-Exit");
-                System.out.println("----------------------------");
-                System.out.println("----------------------------");
-                System.out.println("Select an option:");
+                System.out.println("|------------------------------------|");
+                System.out.println("|----------ººDIDACTIC TESTºº---------|");
+                System.out.println("|    1.Register                      |");
+                System.out.println("|    2.Log in                        |");
+                System.out.println("|    3.-Exit                         |");
+                System.out.println("|------------------------------------|");
+                System.out.println("|------------------------------------|");
+                System.out.print("| Select an option: ");
                 setOption(getWriten().nextLine());
+                System.out.println("|------------------------------------|");
+                
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
             
             switch (getOption()) {
 
-                case "1":                    
-                    System.out.println("-----ººDIDACTIC TEST - REGISTERºº-----");
-                    System.out.println("Enter your names:");
+                case "1":
+                    String yellow = "\033[33m";
+                    String black ="\033[30m";
+                    System.out.println("--------------------------------------");
+                    System.out.println("|    ººDIDACTIC TEST - REGISTERºº    |");
+                    System.out.println("--------------------------------------");
+                    System.out.print("  Enter your names: ");
                     setName(getWrite().nextLine());
-                    System.out.println("Enter your last name:");
+                    System.out.print("  Enter your last name: ");
                     setLastName(getWrite().nextLine());
-                    System.out.println("Enter your age:");
+                    System.out.print("  Enter your age: ");
                     setAge(getWrite().nextLine());                    
-                    System.out.println("Enter your school");
+                    System.out.print("  Enter your Hig School: ");
                     setSchool(getWrite().nextLine());
-                    System.out.println("Enter your School ID:");
-                    setUsername(getWrite().nextLine());
-                    System.out.println("Enter your: ID = Username");
-                    setIndentificationCard(getWrite().nextLine());                    
+                    System.out.println(yellow+ "--------------------------------------");
+                    System.out.println(yellow+ "|       ¡¡¡¡REMEMBER!!!!             |");
+                    System.out.println(yellow+ "|   YOUR ID WILL BE YOUR USERNAME    |");
+                    System.out.println(yellow+ "--------------------------------------");
+                    System.out.print(black+" Enter your ID/Username: ");
+                    setID_Username(getWrite().nextLine());                  
                     
-                    File fi = new File("Data.csv");
+                    File fi = new File("UserRecords.csv");
                     
                     if (fi.exists()) {
                         FileReader fr = new FileReader(fi);
@@ -84,59 +88,72 @@ public class Student {
                         while ((Line = br.readLine()) != null) {
                             String[] contact = Line.split(",");
                             
-                            if (contact[3].equals(getUsername())) {                                
+                            if (contact[3].equals(getID_Username())) {                                
                                 relogin();
                             }
                         }
+                        
                     }
-
-                    System.out.println("Password:");
+                    System.out.print(black+"Password: ");
                     setPassword(getWrite().nextLine());
-                    System.out.println("Again the password:");
+                    System.out.print(black+"Again the password: ");
                     setPasswordA(getWrite().nextLine());
                     
-                    Associate c = new Associate(getName(),getLastName(),
-                                     getAge(),getIndentificationCard(),
-                                     getSchool(),getUsername(), getPasswordA());
+                    Associate c = new Associate(getName(),getLastName(),getAge(),
+                            getSchool(),getID_Username(), getPasswordA());
                     
-                    getW().user(c);
                     
-                    if (getIndentificationCard().equals(getUsername())) {
-                        System.out.println("Not successfully registered :(");
-                    } else {
-                        
-                        System.out.println("It has been successfully registered as:" 
+                    if (getPassword().equals(getPasswordA())) {
+                        String green="\033[32m";
+                        System.out.println(green+"--------------------------------------");
+                        System.out.println(green+" It has been successfully registered as: " 
                                           + getName());
-                    }
-
-                    break;
+                        System.out.println(green+"--------------------------------------");
+                        
+                        File f = new File("UserRecords.csv");
+                        getW().user(c);
+                    
+                        Associate constructor = new Associate(getName(),getLastName(),getAge(),
+                                getSchool(),getID_Username(), getPasswordA());
+                        getMenu().menu2(constructor);
+                      
+                    } else {
+                        String red="\033[31m";
+                        System.out.println(red+"--------------------------------------");
+                        System.out.println(red+"|   Not successfully registered :(   |");
+                        System.out.println(red+"--------------------------------------");
+                        
+                        break;
+                    }    
+                        
+           
 
                 case "2":
-
+                    String green="\033[32m";
                     System.out.println("------ººDIDACTIC TEST - LOG INºº------");
-                    System.out.println("ID = Username:");
-                    setUsername(getWrite().nextLine());
-                    System.out.println("Password:");
+                    System.out.println(green+"| Username:");
+                    setID_Username(getWrite().nextLine());
+                    System.out.println(green+"Password:");
                     setPassword(getWrite().nextLine());
                     
-                    File f = new File("Data.csv");
+                    File f = new File("UserRecords.csv");
                     
                     if (f.exists()) {
                         FileReader fr = new FileReader(f);
                         BufferedReader br = new BufferedReader(fr);
                         String Line;
-                        
+
                         while ((Line = br.readLine()) != null) {
                             String[] contact = Line.split(",");
                             
-                            if (contact[3].equals(getUsername()) && contact[6].equals(getPassword())) {
-                                Associate constructor = new Associate(getName(),getLastName(),getAge(),getIndentificationCard(),
-                                getSchool(),getUsername(), getPasswordA());
+                            if (contact[4].equals(getID_Username()) && contact[5].equals(getPassword())) {
+                                Associate constructor = new Associate(getName(),getLastName(),getAge(),
+                                getSchool(),getID_Username(), getPasswordA());
                                 
                                 name = contact[0];
                                 lastName = contact[1];
                                 age = contact[2];
-                                school = contact[4];                                
+                                school = contact[3];                                
                                 
                                 getMenu().menu2(constructor);
                             }
@@ -145,6 +162,7 @@ public class Student {
                     System.out.println("You don't have an account yet. "
                             + "Proceed to register");
                     break;
+                    
                 case "3":
                     System.exit(0);
                     System.out.println("Thank you for trusting Didactic Test");
@@ -157,8 +175,8 @@ public class Student {
         }
     }
 
-    public void relogin() throws FileNotFoundException, IOException {
-        File fi = new File("Data.csv");
+    public void relogin() throws FileNotFoundException, IOException{
+        File fi = new File("UserRecords.csv");
         
         if (fi.exists()) {
             FileReader fr = new FileReader(fi);
@@ -168,10 +186,10 @@ public class Student {
             while ((Line = br.readLine()) != null) {
                 String[] contact = Line.split(",");
                 
-                if (contact[3].equals(getUsername())) {
+                if (contact[3].equals(getID_Username())) {
                     System.out.println("This user is already registered try another");
                     System.out.println("Username:");
-                    setUsername(getWrite().nextLine());
+                    setID_Username(getWrite().nextLine());
                     relogin();
                 }
 
@@ -221,20 +239,6 @@ public class Student {
     }
 
     /**
-     * @return the indentificationCard
-     */
-    public String getIndentificationCard() {
-        return indentificationCard;
-    }
-
-    /**
-     * @param indentificationCard the indentificationCard to set
-     */
-    public void setIndentificationCard(String indentificationCard) {
-        this.indentificationCard = indentificationCard;
-    }
-
-    /**
      * @return the school
      */
     public String getSchool() {
@@ -249,88 +253,18 @@ public class Student {
     }
 
     /**
-     * @return the fitness
-     */
-    public String getFitness() {
-        return fitness;
-    }
-
-    /**
-     * @param fitness the fitness to set
-     */
-    public void setFitness(String fitness) {
-        this.fitness = fitness;
-    }
-
-    /**
-     * @return the inclination
-     */
-    public String getInclination() {
-        return inclination;
-    }
-
-    /**
-     * @param inclination the inclination to set
-     */
-    public void setInclination(String inclination) {
-        this.inclination = inclination;
-    }
-
-    /**
-     * @return the affinity
-     */
-    public String getAffinity() {
-        return affinity;
-    }
-
-    /**
-     * @param affinity the affinity to set
-     */
-    public void setAffinity(String affinity) {
-        this.affinity = affinity;
-    }
-
-    /**
-     * @return the taste
-     */
-    public String getTaste() {
-        return taste;
-    }
-
-    /**
-     * @param taste the taste to set
-     */
-    public void setTaste(String taste) {
-        this.taste = taste;
-    }
-
-    /**
-     * @return the quality
-     */
-    public String getQuality() {
-        return quality;
-    }
-
-    /**
-     * @param quality the quality to set
-     */
-    public void setQuality(String quality) {
-        this.quality = quality;
-    }
-
-    /**
      * @return the username
      */
-    public String getUsername() {
-        return username;
+    public String getID_Username() {
+        return id_username;
     }
 
     /**
      * @param username the username to set
      */
-    public void setUsername(String username) {
-        this.username = username;
-    }
+    public void setID_Username(String username) {
+        this.id_username = username;
+        }
 
     /**
      * @return the password
@@ -463,7 +397,7 @@ public class Student {
     public String toString() {
         return "Name: " + getName() +"\nLastname: " + getLastName() + "\nAge: " 
                 + age + "\nSchool: " + school + "\nIdentification:" + 
-                getUsername();
+                getID_Username();
     }   
   
 }

@@ -48,7 +48,6 @@ public class DTMenuTest {
         instance.menu2(c);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
-        
     }
 
     /**
@@ -61,9 +60,7 @@ public class DTMenuTest {
         String result = DTMenu.getOption();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        if(!result.equals(expResult)){
         fail("The test case is a prototype.");
-        }
     }
     
 }

@@ -14,28 +14,21 @@ public class Associate {
     private String name;
     private String lastName;
     private String age;
-    private String indentificationCard;
     private String school;
-    private String fitness;
-    private String inclination;
-    private String affinity;
-    private String taste;
-    private String quality;
-    private String username;
+    private String id_username;
     private String password;
     private String passwordA;
     private boolean confirmation;
     private boolean save;
     private String option; 
 
-    public Associate(String name, String lastName, String age, String indentificationCard,
-                       String school, String username, String passwordA) {        
+    public Associate(String name, String lastName, String age,String school, 
+            String username, String passwordA) {        
         this.name = name;
         this.lastName = lastName;
         this.age = age;
-        this.indentificationCard = indentificationCard;
         this.school = school;
-        this.username = username;
+        this.id_username = username;
         this.passwordA = passwordA;        
     }   
 
@@ -63,14 +56,6 @@ public class Associate {
         this.age = age;
     }
 
-    public String getIndentificationCard() {
-        return indentificationCard;
-    }
-
-    public void setIndentificationCard(String indentificationCard) {
-        this.indentificationCard = indentificationCard;
-    }
-
     public String getSchool() {
         return school;
     }
@@ -79,52 +64,12 @@ public class Associate {
         this.school = school;
     }
 
-    public String getFitness() {
-        return fitness;
+    public String getID_Username() {
+        return id_username;
     }
 
-    public void setFitness(String fitness) {
-        this.fitness = fitness;
-    }
-
-    public String getInclination() {
-        return inclination;
-    }
-
-    public void setInclination(String inclination) {
-        this.inclination = inclination;
-    }
-
-    public String getAffinity() {
-        return affinity;
-    }
-
-    public void setAffinity(String affinity) {
-        this.affinity = affinity;
-    }
-
-    public String getTaste() {
-        return taste;
-    }
-
-    public void setTaste(String taste) {
-        this.taste = taste;
-    }
-
-    public String getQuality() {
-        return quality;
-    }
-
-    public void setQuality(String quality) {
-        this.quality = quality;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
+    public void setID_Username(String username) {
+        this.id_username = username;
     }
 
     public String getPassword() {

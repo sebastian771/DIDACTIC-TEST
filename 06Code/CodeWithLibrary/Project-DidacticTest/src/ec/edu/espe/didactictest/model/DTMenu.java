@@ -57,7 +57,7 @@ public class DTMenu {
                     System.out.println("\n----------Showing tests performed by "
                                       + "the user------------");
                     
-                    String fileName = student.getUsername() + ".txt";                    
+                    String fileName = student.getName() + ".txt";                    
                     fileManager.openFileForRead(fileName);
                     break;
                     
