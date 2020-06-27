@@ -18,6 +18,7 @@ public class DTMenu {
     Scanner writen = new Scanner(System.in);
     public String black ="\033[30m";
     public String red="\033[31m";
+    public String blue="\033[34m";
 
     public void menu2(Associate c) {
         while (option != "4") {
@@ -37,7 +38,7 @@ public class DTMenu {
                 
                 case "1":
                     
-                    System.out.println("Didactic test will be implemented in "
+                    System.out.println(blue+"Didactic test will be implemented in "
                                         + "version 2.0 Objects!!!");
                     break;
                     

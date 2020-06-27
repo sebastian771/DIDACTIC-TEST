@@ -5,6 +5,7 @@
  */
 package ec.edu.espe.didactictest.model;
 
+import static ec.edu.espe.didactictest.model.DTMenu.getOption;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -51,7 +52,7 @@ public class Student {
                 System.out.println("|    3.-Exit                         |");
                 System.out.println("|------------------------------------|");
                 System.out.println("|------------------------------------|");
-                System.out.print("| Select an option: ");
+                System.out.print(black+"| Select an option: ");
                 setOption(getWriten().nextLine());
                 System.out.println("|------------------------------------|");
                 
@@ -79,9 +80,26 @@ public class Student {
                     System.out.println(yellow+ "--------------------------------------");
                     System.out.print(black+" Enter your ID/Username: ");
                     setID_Username(getWrite().nextLine());                  
+                    if(getID_Username().length()==10){
+                    }else{
+                        reEnterUsername();
+                        /*while (getID_Username().length()!=10) {
+                            if(getID_Username().length()!=10){
+                                if(getID_Username().length()<10){
+                                    System.out.println(red+"Very shrot ID, must be 10 characters!!");    
+                                    System.out.println(red+"  Re-enter your ID/Username!!! ");
+                                    System.out.print(black+ " ID/Username: "+black);
+                                }
+                                if(getID_Username().length()>10){
+                                    System.out.println(red+"Very long ID, must be 10 characters!!");    
+                                    System.out.println(red+"  Re-enter your ID/Username!!! ");
+                                    System.out.print(black+ " ID/Username: "+black);
+                                }
+                            }*/
+                        
+                                                            }                       
                     
-                    File fi = new File("UserRecords.csv");
-                    
+                   File fi = new File("UserRecords.csv");     
                     if (fi.exists()) {
                         FileReader fr = new FileReader(fi);
                         BufferedReader br = new BufferedReader(fr);
@@ -93,10 +111,8 @@ public class Student {
                             
                             if (contact[4].equals(getID_Username())) {                                
                                 relogin();
-                            }
-                        }
-                        
-                    }
+                            }}}
+                    
                     System.out.print(black+" Password: ");
                     setPassword(getWrite().nextLine());
                     System.out.print(black+" Again the password: ");
@@ -107,11 +123,11 @@ public class Student {
                     
                     
                     if (getPassword().equals(getPasswordA())) {
-                        String green="\033[32m";
-                        System.out.println(green+"---------------------------------------");
-                        System.out.println(green+"It has been successfully registered as:");
-                       System.out.println("\t\t\t\t" +getName());
-                        System.out.println(green+"--------------------------------------");
+                        
+                        System.out.println(green+" -----------------------------------------");
+                        System.out.println(green+" It has been successfully registered as:");
+                        System.out.println("\t\t\t" +getName());
+                        System.out.println(green+"--------------------------------------"+black);
                         
                         File f = new File("UserRecords.csv");
                         getW().user(c);
@@ -123,18 +139,18 @@ public class Student {
                     } else {
                         System.out.println(red+"--------------------------------------");
                         System.out.println(red+"|   Not successfully registered :(   |");
-                        System.out.println(red+"--------------------------------------");
+                        System.out.println(red+"--------------------------------------"+black);
                         
                         break;
-                    }    
+                    } 
                         
            
 
                 case "2":
                     System.out.println("------ººDIDACTIC TEST - LOG INºº------");
-                    System.out.println("| Username:"+green);
+                    System.out.print("| Username:  "+green);
                     setID_Username(getWrite().nextLine());
-                    System.out.println(black+"| Password:"+green);
+                    System.out.print(black+"| Password:  "+green);
                     setPassword(getWrite().nextLine());
                     
                     File f = new File("UserRecords.csv");
@@ -176,6 +192,7 @@ public class Student {
         }
     }
 
+
     public void relogin() throws FileNotFoundException, IOException{
         File fi = new File("UserRecords.csv");
         
@@ -188,15 +205,31 @@ public class Student {
                 String[] contact = Line.split(",");
                 
                 if (contact[4].equals(getID_Username())) {
-                    System.out.println(red+"This user is already registered try another");
-                    System.out.println("Username:");
+                    System.out.println(red+"This user is already registered try another!!");
+                    System.out.print(black+"Username:");
                     setID_Username(getWrite().nextLine());
+                    reEnterUsername();
                     relogin();
                 }
-
             }
-
         }
+    }
+
+    public void reEnterUsername(){
+while (getID_Username().length()!=10) {
+    if(getID_Username().length()!=10){
+        if(getID_Username().length()<10){
+            System.out.println(red+"Very shrot ID, must be 10 characters!!");    
+            System.out.println(red+"  Re-enter your ID/Username!!! ");
+            System.out.print(black+ " ID/Username: "+black);
+        }
+        if(getID_Username().length()>10){
+            System.out.println(red+"Very long ID, must be 10 characters!!");    
+            System.out.println(red+"  Re-enter your ID/Username!!! ");
+                                    System.out.print(black+ " ID/Username: "+black);
+            }
+        } setID_Username(getWrite().nextLine());   
+    }
     }
 
     public boolean saveData() {
