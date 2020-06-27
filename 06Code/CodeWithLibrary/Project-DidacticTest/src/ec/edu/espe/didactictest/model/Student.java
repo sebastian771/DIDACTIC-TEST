@@ -29,6 +29,11 @@ public class Student {
     private boolean confirmation;
     private boolean save;
     private String option;
+    //Colors
+    public String green ="\033[32m]";
+    public String yellow = "\033[33m";
+    public String black ="\033[30m";
+    public String red="\033[31m";
     
     private Scanner write = new Scanner(System.in);    
     private Scanner writen = new Scanner(System.in);
@@ -57,8 +62,6 @@ public class Student {
             switch (getOption()) {
 
                 case "1":
-                    String yellow = "\033[33m";
-                    String black ="\033[30m";
                     System.out.println("--------------------------------------");
                     System.out.println("|    ººDIDACTIC TEST - REGISTERºº    |");
                     System.out.println("--------------------------------------");
@@ -88,15 +91,15 @@ public class Student {
                         while ((Line = br.readLine()) != null) {
                             String[] contact = Line.split(",");
                             
-                            if (contact[3].equals(getID_Username())) {                                
+                            if (contact[4].equals(getID_Username())) {                                
                                 relogin();
                             }
                         }
                         
                     }
-                    System.out.print(black+"Password: ");
+                    System.out.print(black+" Password: ");
                     setPassword(getWrite().nextLine());
-                    System.out.print(black+"Again the password: ");
+                    System.out.print(black+" Again the password: ");
                     setPasswordA(getWrite().nextLine());
                     
                     Associate c = new Associate(getName(),getLastName(),getAge(),
@@ -105,9 +108,9 @@ public class Student {
                     
                     if (getPassword().equals(getPasswordA())) {
                         String green="\033[32m";
-                        System.out.println(green+"--------------------------------------");
-                        System.out.println(green+" It has been successfully registered as: " 
-                                          + getName());
+                        System.out.println(green+"---------------------------------------");
+                        System.out.println(green+"It has been successfully registered as:");
+                       System.out.println("\t\t\t\t" +getName());
                         System.out.println(green+"--------------------------------------");
                         
                         File f = new File("UserRecords.csv");
@@ -118,7 +121,6 @@ public class Student {
                         getMenu().menu2(constructor);
                       
                     } else {
-                        String red="\033[31m";
                         System.out.println(red+"--------------------------------------");
                         System.out.println(red+"|   Not successfully registered :(   |");
                         System.out.println(red+"--------------------------------------");
@@ -129,11 +131,10 @@ public class Student {
            
 
                 case "2":
-                    String green="\033[32m";
                     System.out.println("------ººDIDACTIC TEST - LOG INºº------");
-                    System.out.println(green+"| Username:");
+                    System.out.println("| Username:"+green);
                     setID_Username(getWrite().nextLine());
-                    System.out.println(green+"Password:");
+                    System.out.println(black+"| Password:"+green);
                     setPassword(getWrite().nextLine());
                     
                     File f = new File("UserRecords.csv");
@@ -165,9 +166,9 @@ public class Student {
                     
                 case "3":
                     System.exit(0);
-                    System.out.println("Thank you for trusting Didactic Test");
+                    System.out.println(green+ "Thank you for trusting Didactic Test");
                 default:
-                    System.out.println("Option not valid, just enter \"1\", "
+                    System.out.println(red+"Option not valid, just enter \"1\", "
                             + "\"2\" or \"3\"");
                     break;
             }
@@ -186,8 +187,8 @@ public class Student {
             while ((Line = br.readLine()) != null) {
                 String[] contact = Line.split(",");
                 
-                if (contact[3].equals(getID_Username())) {
-                    System.out.println("This user is already registered try another");
+                if (contact[4].equals(getID_Username())) {
+                    System.out.println(red+"This user is already registered try another");
                     System.out.println("Username:");
                     setID_Username(getWrite().nextLine());
                     relogin();

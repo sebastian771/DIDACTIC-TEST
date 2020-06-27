@@ -1,9 +1,0 @@
-
------------Analysis of results-----------
-Tus habilidades para la carrera de:EXPERIMENTAL SCIENTIST
-Tu puntuación en esta carreara es del 30%
-Name: Sebastian
-Lastname: Zapata
-Age: 21
-School: TFT
-Identification:123456789

@@ -179,7 +179,7 @@ public class Analysis {
         System.out.println("\nResults:\n");
 
         try {
-            t.loadArchive("Question" + integer + ".txt");
+            t.loadArchive("Questions\\Question" + integer + ".txt");
             t.performTest();
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
@@ -190,7 +190,7 @@ public class Analysis {
         FileManager fileManager = new FileManager();
         Student student = new Student();
         
-        String fileName = student.getName() + ".txt";
+        String fileName = "Analysis\\"+student.getName() + ".csv";
         
         fileManager.createFile(fileName);
         fileManager.writeString(toString(), student.toString(), fileName);

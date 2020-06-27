@@ -16,18 +16,25 @@ public class DTMenu {
 
     public static String option;
     Scanner writen = new Scanner(System.in);
+    public String black ="\033[30m";
+    public String red="\033[31m";
 
     public void menu2(Associate c) {
         while (option != "4") {
             
+            System.out.println("--------------------------------------------------");
             System.out.println("-----------Welcome to the DIDACTIC TEST-----------");
-            System.out.println("1.Perform Didactic Test");
-            System.out.println("2.Take Test");
-            System.out.println("3.Print Data");
-            System.out.println("4.Exit");            
+            System.out.println("|  1.Perform Didactic Test                       |");
+            System.out.println("|  2.Take Test                                   |");
+            System.out.println("|  3.Print Data                                  |");
+            System.out.println("|  4.Exit                                        |"); 
+            System.out.println("--------------------------------------------------");
+            System.out.print("| Select an option: ");
             option = writen.nextLine();
+            System.out.println("--------------------------------------------------");
             
             switch (option) {
+                
                 case "1":
                     
                     System.out.println("Didactic test will be implemented in "
@@ -57,7 +64,7 @@ public class DTMenu {
                     System.out.println("\n----------Showing tests performed by "
                                       + "the user------------");
                     
-                    String fileName = student.getName() + ".txt";                    
+                    String fileName = "Analysis\\"+student.getName() + ".csv";                    
                     fileManager.openFileForRead(fileName);
                     break;
                     
@@ -66,8 +73,9 @@ public class DTMenu {
                     System.exit(0);
 
                 default:
-                    System.out.println("Option not valid, just enter 1, 2 , 3 "
-                                      + "or, 4");
+                    
+                    System.out.println(red+"Option not valid, just enter 1, 2 , 3 "
+                                      + "or, 4"+black);
                     break;
             }
         }
